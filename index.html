@@ -619,7 +619,13 @@ nav.light-nav .hamburger span { background: var(--navy); }
   gap: 20px;
 }
 
-.stat-item { text-align: center; }
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 6px;
+}
 
 .stat-number {
   font-family: var(--font-display);
@@ -630,11 +636,12 @@ nav.light-nav .hamburger span { background: var(--navy); }
 }
 
 .stat-label {
+  display: block;
   font-size: 0.7rem;
   color: rgba(255,255,255,0.45);
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  margin-top: 4px;
+  margin: 0;
 }
 
 .hero-pill-tags {
