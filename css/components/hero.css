@@ -2,10 +2,11 @@
 #home {
   min-height: 100vh;
   background-color: var(--navy);
-  background-image: linear-gradient(rgba(var(--navy-rgb), 0.85), rgba(var(--navy-rgb), 0.85)), url('../../assets/images/hero-bg.png');
+  background-image: linear-gradient(rgba(var(--navy-rgb), 0.99), rgba(var(--navy-rgb), 0.85)), url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=2000&q=80');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  background-attachment: fixed;
   position: relative;
   display: flex;
   align-items: center;
