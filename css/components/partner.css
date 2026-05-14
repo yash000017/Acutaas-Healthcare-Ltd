@@ -1,0 +1,105 @@
+/* ═══════════ PARTNER ═══════════ */
+#partner { background: var(--off-white); }
+
+.partner-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 70px;
+  align-items: center;
+}
+
+.partner-features {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin-top: 28px;
+}
+
+.partner-feature {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  padding: 18px 22px;
+  background: var(--white);
+  border-radius: 12px;
+  border: 1px solid var(--gray-300);
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.partner-feature:hover {
+  border-color: var(--blue-primary);
+  box-shadow: 0 4px 20px rgba(var(--blue-primary-rgb), 0.1);
+}
+
+.pf-icon {
+  width: 40px; height: 40px;
+  background: rgba(var(--blue-primary-rgb), 0.1);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.pf-icon svg { width: 18px; height: 18px; fill: var(--blue-primary); }
+
+.pf-title { font-weight: 600; font-size: 0.9rem; color: var(--navy); margin-bottom: 4px; }
+.pf-text { font-size: 0.8rem; color: var(--gray-500); line-height: 1.6; }
+
+.partner-big-card {
+  background: linear-gradient(135deg, var(--navy), var(--navy-mid));
+  border-radius: 20px;
+  padding: 44px;
+  color: var(--white);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.partner-big-card::before {
+  content: '';
+  position: absolute;
+  top: -50px; left: -50px;
+  width: 160px; height: 160px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(var(--blue-primary-rgb), 0.18), transparent 70%);
+}
+
+.partner-big-icon {
+  width: 70px; height: 70px;
+  background: linear-gradient(135deg, var(--blue-primary), var(--blue-light));
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+}
+
+.partner-big-icon svg { width: 36px; height: 36px; fill: var(--white); }
+
+.partner-big-title {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--white);
+  margin-bottom: 14px;
+}
+
+.partner-big-text { font-size: 0.85rem; color: rgba(var(--white-rgb), 0.55); line-height: 1.7; }
+
+.partner-badge-row {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 24px;
+}
+
+.partner-badge {
+  padding: 7px 16px;
+  background: rgba(var(--blue-primary-rgb), 0.15);
+  border: 1px solid rgba(var(--blue-primary-rgb), 0.35);
+  border-radius: 100px;
+  font-size: 0.72rem;
+  color: var(--blue-light);
+}

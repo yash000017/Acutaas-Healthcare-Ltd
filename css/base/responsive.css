@@ -1,0 +1,31 @@
+/* ═══════════ RESPONSIVE ═══════════ */
+@media (max-width: 1024px) {
+  .values-grid { grid-template-columns: repeat(2, 1fr); }
+  .footer-top { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 768px) {
+  nav { padding: 0 5%; }
+  .nav-links { display: none; }
+  .hamburger { display: flex; }
+
+  .hero-content { grid-template-columns: 1fr; padding: 110px 5% 70px; }
+  .hero-stats { display: none; }
+
+  .about-grid,
+  .mission-cards,
+  .partner-inner,
+  .contact-grid { grid-template-columns: 1fr; }
+
+  .mission-cards { gap: 14px; }
+  .values-grid { grid-template-columns: 1fr; }
+  .footer-top { grid-template-columns: 1fr; gap: 28px; }
+  .footer-bottom { flex-direction: column; text-align: center; }
+  .form-row { grid-template-columns: 1fr; }
+
+  section { padding: 65px 5%; }
+
+  .floating-capsule,
+  .dna-mini,
+  .molecule-dot { opacity: 0.06; }
+}

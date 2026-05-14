@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>News | Acutaas Healthcare Ltd</title>
+<link rel="icon" type="image/png" href="./assets/images/logo-capsule.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./css/base/variables.css">
+<link rel="stylesheet" href="./css/base/global.css">
+<link rel="stylesheet" href="./css/base/animations.css">
+<link rel="stylesheet" href="./css/base/common.css">
+<link rel="stylesheet" href="./css/components/navbar.css">
+<link rel="stylesheet" href="./css/components/hero.css">
+<link rel="stylesheet" href="./css/components/about.css">
+<link rel="stylesheet" href="./css/components/mission.css">
+<link rel="stylesheet" href="./css/components/values.css">
+<link rel="stylesheet" href="./css/components/partner.css">
+<link rel="stylesheet" href="./css/components/cta.css">
+<link rel="stylesheet" href="./css/components/contact.css">
+<link rel="stylesheet" href="./css/components/footer.css">
+<link rel="stylesheet" href="./css/base/responsive.css">
+  <link rel="stylesheet" href="./css/components/page-layout.css">
+</head>
+<body>
+
+<!-- Navigation -->
+<nav id="navbar">
+  <a href="index.html#home" class="nav-logo">
+    <div class="nav-logo-icon">
+      <img src="./assets/images/logo-capsule.png" alt="Acutaas Logo" class="logo-img" />
+    </div>
+    <div>
+      <span class="nav-logo-text">Acutaas</span>
+      <span class="nav-logo-sub">Healthcare Ltd.</span>
+    </div>
+  </a>
+
+  <ul class="nav-links">
+    <li><a href="index.html#home">Home</a></li>
+    <li><a href="index.html#about">About</a></li>
+    <li><a href="index.html#mission">Mission</a></li>
+    <li><a href="index.html#values">Values</a></li>
+    <li><a href="index.html#partner">Partner</a></li>
+    <li><a href="index.html#contact" class="nav-cta">Contact Us</a></li>
+  </ul>
+
+  <button class="hamburger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html#home" onclick="toggleMenu()">Home</a>
+  <a href="index.html#about" onclick="toggleMenu()">About Us</a>
+  <a href="index.html#mission" onclick="toggleMenu()">Mission & Aims</a>
+  <a href="index.html#values" onclick="toggleMenu()">Our Values</a>
+  <a href="index.html#partner" onclick="toggleMenu()">Partnerships</a>
+  <a href="index.html#contact" onclick="toggleMenu()">Contact Us</a>
+</div>
+<!-- MARKETING HERO -->
+<section id="home">
+  <div class="hero-bg-grid"></div>
+  <div class="hero-orb hero-orb-1"></div>
+  <div class="hero-orb hero-orb-2"></div>
+
+  <div class="hero-content">
+    <div class="hero-text-col">
+      <div class="hero-eyebrow">Latest Information</div>
+      <h1 class="hero-title">News & <em>Updates</em></h1>
+      <p class="hero-desc">Stay updated with our latest regulatory approvals, product launches, and company milestones as we deliver healthcare solutions.</p>
+      <div class="hero-actions">
+        <a href="#content" class="btn-primary">
+          Explore
+          <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" fill="none"/></svg>
+        </a>
+      </div>
+    </div>
+    
+    <div class="hero-visual-col" style="animation: fadeIn 1s ease 0.5s both;">
+      <div class="hero-visual-card" style="padding: 10px;">
+        <img src="./assets/images/hero_news.png" alt="Hero Image" style="width: 100%; height: 400px; object-fit: cover; border-radius: 12px; display: block; filter: drop-shadow(0 15px 35px rgba(var(--black-rgb), 0.25));" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MAIN CONTENT -->
+<div id="content">
+
+<!-- LIGHT SECTION -->
+<section id="featured-news" class="section-light">
+  <div class="container">
+    <div class="section-header reveal">
+      <h2 class="section-title">Featured Story</h2>
+      <p class="section-subtitle">Our most recent milestone</p>
+    </div>
+    
+    <div class="about-grid" style="align-items: center; gap: 60px;">
+      <div class="about-image-col reveal reveal-delay-1" style="order: 2;">
+        <div class="about-image-wrapper">
+          <img src="./assets/images/hero_compliance.png" alt="Featured News" style="width: 100%; border-radius: 12px; filter: drop-shadow(0 15px 30px rgba(var(--navy-rgb), 0.15));" />
+        </div>
+      </div>
+      <div class="about-text-col reveal" style="order: 1;">
+        <span style="font-size: 0.8rem; font-weight: 700; color: var(--blue-primary); letter-spacing: 0.1em; text-transform: uppercase; display: block; margin-bottom: 10px;">May 12, 2026</span>
+        <h3 style="font-family: var(--font-display); font-size: 2.2rem; color: var(--navy); margin-bottom: 20px; line-height: 1.2;">Acutaas Completes Rigorous Regulatory GDP Audit</h3>
+        <p style="color: var(--gray-700); font-size: 1.1rem; line-height: 1.8; margin-bottom: 20px;">We are proud to announce the successful completion of our comprehensive regulatory audit, reaffirming our absolute 100% compliance record in Good Distribution Practice.</p>
+        <p style="color: var(--gray-700); font-size: 1.1rem; line-height: 1.8;">This milestone ensures our supply chain remains robust and reliable, providing critical generic medicines to healthcare providers without interruption.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DARK SECTION (Press Releases) -->
+<section id="press-releases" class="section-dark">
+  <div class="molecule-dot gold" style="top: 15%; left: 8%; animation-delay: 0s;"></div>
+  
+  <div class="container relative">
+    <div class="section-header reveal">
+      <h2 class="section-title">Press Releases</h2>
+      <p class="section-subtitle">Stay updated with our latest announcements.</p>
+    </div>
+    
+    <div class="values-grid reveal reveal-delay-1" style="grid-template-columns: repeat(2, 1fr);">
+      <!-- News 1 -->
+      <div class="value-card">
+        <div style="font-size: 0.75rem; color: var(--gold); font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 10px;">April 3, 2026</div>
+        <h3 class="value-title">Portfolio Expansion in Critical Care</h3>
+        <p class="value-text">Acutaas expands its portfolio of repurposed generic medicines, ensuring cost-effective treatments for critical care patients across the UK.</p>
+        <a href="index.html#contact" style="display: inline-block; margin-top: 20px; color: var(--white); text-decoration: none; font-size: 0.85rem; font-weight: 600; border-bottom: 1px solid var(--gold); padding-bottom: 4px;">Read More</a>
+      </div>
+      <!-- News 2 -->
+      <div class="value-card">
+        <div style="font-size: 0.75rem; color: var(--gold); font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 10px;">February 18, 2026</div>
+        <h3 class="value-title">Strategic Partnership Announced</h3>
+        <p class="value-text">We have partnered with leading logistics providers to cut delivery times of essential medicines to pharmacies by 40%.</p>
+        <a href="index.html#contact" style="display: inline-block; margin-top: 20px; color: var(--white); text-decoration: none; font-size: 0.85rem; font-weight: 600; border-bottom: 1px solid var(--gold); padding-bottom: 4px;">Read More</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</div>
+<footer>
+  <!-- Footer Animations -->
+  <div class="section-anim-container">
+    <div class="molecule-dot gold" style="top: 20%; left: 5%; animation-delay: 0s; opacity: 0.1;"></div>
+    <div class="molecule-dot blue" style="top: 40%; right: 8%; animation-delay: -1.5s; opacity: 0.08;"></div>
+    <div class="glow-orb" style="width: 180px; height: 180px; background: var(--blue-primary); opacity: 0.04; bottom: -40px; right: 10%;"></div>
+  </div>
+
+  <div class="footer-top">
+    <div>
+      <a href="index.html#home" class="nav-logo" style="margin-bottom: 10px;">
+        <div class="nav-logo-icon"><img src="./assets/images/logo-capsule.png" alt="Acutaas Logo" class="logo-img" /></div>
+        <div>
+          <span class="nav-logo-text">Acutaas</span>
+          <span class="nav-logo-sub">Healthcare Ltd.</span>
+        </div>
+      </a>
+      <p class="footer-brand-desc">An innovative pharmaceutical company committed to the commercialisation of generic medicines and patient-centric healthcare solutions.</p>
+    </div>
+
+    <div>
+      <div class="footer-col-title">Navigation</div>
+      <ul class="footer-links">
+        <li><a href="index.html#home">Home</a></li>
+        <li><a href="index.html#about">About Us</a></li>
+        <li><a href="index.html#mission">Mission & Vision</a></li>
+        <li><a href="index.html#values">Our Values</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <div class="footer-col-title">Company</div>
+      <ul class="footer-links">
+        <li><a href="index.html#partner">Partnerships</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+        <li><a href="careers.html">Careers</a></li>
+        <li><a href="news.html">News</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <div class="footer-col-title">Legal</div>
+      <ul class="footer-links">
+        <li><a href="privacy.html">Privacy Policy</a></li>
+        <li><a href="terms.html">Terms of Service</a></li>
+        <li><a href="compliance.html">Compliance</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p class="footer-copy">&copy; 2026 Acutaas Healthcare Ltd. All rights reserved.</p>
+    <div class="footer-legal">
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Mobile menu toggle
+function toggleMenu() {
+  document.getElementById('mobileMenu').classList.toggle('open');
+}
+
+// Navbar scroll effect
+window.addEventListener('scroll', function() {
+  const navbar = document.getElementById('navbar');
+  const sections = document.querySelectorAll('section');
+  const scrollTop = window.scrollY;
+
+  if (scrollTop > 50) {
+    navbar.classList.add('scrolled');
+  } else {
+    navbar.classList.remove('scrolled');
+  }
+
+  // Check if we're on a light section
+  let onLightSection = false;
+  sections.forEach(section => {
+    if (section.id !== 'home' && section.id !== 'values' && section.id !== 'cta') {
+      const rect = section.getBoundingClientRect();
+      if (rect.top <= 80 && rect.bottom > 80) {
+        onLightSection = true;
+      }
+    }
+  });
+
+  if (onLightSection && scrollTop > 50) {
+    navbar.classList.add('light-nav');
+  } else {
+    navbar.classList.remove('light-nav');
+  }
+});
+
+// Scroll reveal
+function reveal() {
+  const reveals = document.querySelectorAll('.reveal');
+  reveals.forEach(el => {
+    const windowHeight = window.innerHeight;
+    const elementTop = el.getBoundingClientRect().top;
+    const elementVisible = 120;
+    if (elementTop < windowHeight - elementVisible) {
+      el.classList.add('visible');
+    }
+  });
+}
+
+window.addEventListener('scroll', reveal);
+window.addEventListener('load', reveal);
+
+// Form validation and Custom Select setup
+document.addEventListener('DOMContentLoaded', () => {
+  const form = document.getElementById('contactForm');
+  
+  // Custom Select Logic
+  const customSelects = document.querySelectorAll('.custom-select-container');
+  customSelects.forEach(container => {
+    const select = container.querySelector('select');
+    const trigger = container.querySelector('.custom-select-trigger');
+    const triggerText = trigger.querySelector('span');
+    const options = container.querySelectorAll('.custom-option');
+    
+    trigger.addEventListener('click', () => {
+      container.classList.toggle('open');
+    });
+    
+    options.forEach(option => {
+      option.addEventListener('click', () => {
+        select.value = option.getAttribute('data-value');
+        select.dispatchEvent(new Event('input', { bubbles: true }));
+        
+        triggerText.textContent = option.textContent;
+        options.forEach(opt => opt.classList.remove('selected'));
+        option.classList.add('selected');
+        
+        container.classList.remove('open');
+      });
+    });
+    
+    document.addEventListener('click', (e) => {
+      if (!container.contains(e.target)) {
+        container.classList.remove('open');
+      }
+    });
+  });
+
+  if (form) {
+    // Clear error state when the user types or selects
+    form.addEventListener('input', (e) => {
+      if (e.target.classList.contains('invalid')) {
+        e.target.classList.remove('invalid');
+        if (e.target.tagName === 'SELECT' && e.target.parentElement.classList.contains('custom-select-container')) {
+          e.target.parentElement.querySelector('.custom-select-trigger').classList.remove('invalid');
+        }
+        const errorMsg = e.target.parentElement.querySelector('.error-msg');
+        if (errorMsg) errorMsg.remove();
+      }
+    });
+  }
+});
+
+// Form submission
+function handleSubmit(e) {
+  e.preventDefault();
+  const form = e.target;
+  let isValid = true;
+  
+  // Clear all previous errors
+  form.querySelectorAll('.error-msg').forEach(el => el.remove());
+  form.querySelectorAll('.invalid').forEach(el => el.classList.remove('invalid'));
+
+  // Validate each required field
+  Array.from(form.elements).forEach(field => {
+    if (field.name && !field.validity.valid) {
+      isValid = false;
+      field.classList.add('invalid');
+      
+      if (field.tagName === 'SELECT' && field.parentElement.classList.contains('custom-select-container')) {
+        field.parentElement.querySelector('.custom-select-trigger').classList.add('invalid');
+      }
+      
+      const error = document.createElement('div');
+      error.className = 'error-msg';
+      // Provide a custom message if it's valueMissing, otherwise use browser's default
+      if (field.validity.valueMissing) {
+        error.textContent = 'This field is required.';
+      } else if (field.validity.typeMismatch && field.type === 'email') {
+        error.textContent = 'Please enter a valid email address.';
+      } else {
+        error.textContent = field.validationMessage || 'Invalid input.';
+      }
+      
+      field.parentElement.appendChild(error);
+    }
+  });
+
+  if (isValid) {
+    // Show custom toast instead of alert
+    let toast = document.getElementById('successToast');
+    if (!toast) {
+      toast = document.createElement('div');
+      toast.id = 'successToast';
+      toast.className = 'toast-notification';
+      toast.innerHTML = `
+        <div class="toast-icon">
+          <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+        </div>
+        <div class="toast-content">
+          <span class="toast-title">Message Sent!</span>
+          <span class="toast-message">Thank you. We will get back to you soon.</span>
+        </div>
+        <button class="toast-close" onclick="this.parentElement.classList.remove('show')">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      `;
+      document.body.appendChild(toast);
+    }
+    
+    // Force reflow and show
+    void toast.offsetWidth;
+    toast.classList.add('show');
+    
+    // Auto hide
+    setTimeout(() => {
+      toast.classList.remove('show');
+    }, 5000);
+
+    form.reset();
+    
+    // Reset custom selects visually
+    document.querySelectorAll('.custom-select-container').forEach(container => {
+      const triggerText = container.querySelector('.custom-select-trigger span');
+      const defaultOption = container.querySelector('.custom-option[data-value=""]');
+      triggerText.textContent = defaultOption.textContent;
+      container.querySelectorAll('.custom-option').forEach(opt => opt.classList.remove('selected'));
+      defaultOption.classList.add('selected');
+    });
+  }
+}
+</script>
+</body>
+</html>

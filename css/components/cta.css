@@ -1,0 +1,53 @@
+/* ═══════════ CTA ═══════════ */
+#cta {
+  background: linear-gradient(135deg, var(--blue-primary) 0%, var(--blue-dark) 100%);
+  padding: 70px 5%;
+  text-align: center;
+}
+
+.cta-inner { max-width: 650px; margin: 0 auto; position: relative; z-index: 10; }
+
+.cta-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+  font-weight: 600;
+  color: var(--white);
+  line-height: 1.2;
+  margin-bottom: 14px;
+}
+
+.cta-sub {
+  font-size: 0.95rem;
+  color: rgba(var(--white-rgb), 0.7);
+  margin-bottom: 36px;
+  line-height: 1.7;
+}
+
+.cta-buttons { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+
+.btn-white {
+  padding: 14px 32px;
+  background: var(--white);
+  color: var(--blue-primary);
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.btn-white:hover { transform: translateY(-2px); box-shadow: 0 10px 35px rgba(var(--black-rgb), 0.2); }
+
+.btn-ghost {
+  padding: 14px 32px;
+  border: 1.5px solid rgba(var(--white-rgb), 0.4);
+  color: var(--white);
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 0.85rem;
+  text-decoration: none;
+  transition: border-color var(--transition-fast), background var(--transition-fast);
+}
+
+.btn-ghost:hover { border-color: var(--white); background: rgba(var(--white-rgb), 0.1); }

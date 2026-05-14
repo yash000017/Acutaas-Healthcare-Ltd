@@ -1,0 +1,60 @@
+/* ═══════════ SECTION COMMON ═══════════ */
+section { padding: 90px 5%; position: relative; overflow: hidden; }
+
+.section-inner { max-width: 1200px; margin: 0 auto; position: relative; z-index: 10; }
+
+.section-dark { background: var(--navy); }
+.section-dark .section-title { color: var(--white); }
+.section-dark .section-sub { color: rgba(var(--white-rgb), 0.6); }
+.section-dark .section-label { color: var(--blue-light); }
+.section-dark .section-label::before { background: var(--blue-light); }
+
+.section-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--blue-primary);
+  margin-bottom: 14px;
+}
+
+.section-label::before {
+  content: '';
+  width: 20px; height: 2px;
+  background: var(--blue-primary);
+}
+
+.section-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+  font-weight: 600;
+  color: var(--navy);
+  line-height: 1.15;
+  margin-bottom: 16px;
+}
+
+.section-title em { font-style: italic; color: var(--blue-primary); }
+
+.section-sub {
+  font-size: 0.95rem;
+  color: var(--gray-500);
+  max-width: 550px;
+  line-height: 1.75;
+}
+
+/* ═══════════ SCROLL REVEAL ═══════════ */
+.reveal {
+  opacity: 0;
+  transform: translateY(35px);
+  transition: opacity 0.65s ease, transform 0.65s ease;
+}
+
+.reveal.visible { opacity: 1; transform: translateY(0); }
+
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+.reveal-delay-4 { transition-delay: 0.4s; }
