@@ -44,7 +44,7 @@
     <li><a href="#partner">Partner</a></li>
     <li><a href="careers.html">Careers</a></li>
     <li><a href="news.html">News</a></li>
-    <li><a href="#contact" class="nav-cta">Contact Us</a></li>
+    <li><a href="contact.html" class="nav-cta">Contact Us</a></li>
   </ul>
 
   <button class="hamburger" onclick="toggleMenu()">
@@ -60,7 +60,7 @@
   <a href="#partner" onclick="toggleMenu()">Partnerships</a>
   <a href="careers.html" onclick="toggleMenu()">Careers</a>
   <a href="news.html" onclick="toggleMenu()">News</a>
-  <a href="#contact" onclick="toggleMenu()">Contact Us</a>
+  <a href="contact.html" onclick="toggleMenu()">Contact Us</a>
 </div>
 
 <!-- Hero -->
@@ -96,7 +96,7 @@
           Discover Our Story
           <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
         </a>
-        <a href="#contact" class="btn-outline">Get In Touch</a>
+        <a href="contact.html" class="btn-outline">Get In Touch</a>
       </div>
     </div>
 
@@ -368,108 +368,12 @@
     <h2 class="cta-title">Ready to Make a Difference in Healthcare Together?</h2>
     <p class="cta-sub">Whether you're a healthcare professional, business partner, or looking to explore collaboration opportunities — we'd love to hear from you.</p>
     <div class="cta-buttons">
-      <a href="#contact" class="btn-white">Get in Touch</a>
+      <a href="contact.html" class="btn-white">Get in Touch</a>
       <a href="#about" class="btn-ghost">Learn More</a>
     </div>
   </div>
 </section>
 
-<!-- Contact -->
-<section id="contact">
-  <!-- Contact Animations -->
-  <div class="section-anim-container">
-    <div class="floating-pill" style="top: 10%; right: 5%; animation-delay: -1s;"></div>
-    <div class="molecule-dot blue" style="bottom: 25%; left: 12%; animation-delay: 0s;"></div>
-    <div class="molecule-dot gold" style="bottom: 20%; right: 12%; animation-delay: -1.5s;"></div>
-    <div class="medical-cross-small" style="top: 15%; left: 8%; animation-delay: -18s;"></div>
-    <div class="glow-orb" style="width: 150px; height: 150px; background: var(--blue-primary); opacity: 0.03; bottom: 10%; right: -30px;"></div>
-  </div>
-
-  <div class="section-inner">
-    <div style="text-align:center; margin-bottom: 20px;">
-      <span class="section-label reveal">Reach Us</span>
-      <h2 class="section-title reveal reveal-delay-1">Let's Start a <em>Conversation</em></h2>
-      <p class="section-sub reveal reveal-delay-2" style="margin: 0 auto;">We welcome enquiries from partners, healthcare professionals, and anyone interested in what we do.</p>
-    </div>
-
-    <div class="contact-grid">
-      <div class="reveal">
-        <h3 style="font-family: var(--font-display); font-size: 1.4rem; color: var(--navy); margin-bottom: 28px;">Contact Information</h3>
-
-        <div class="contact-info-item">
-          <div class="ci-icon"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg></div>
-          <div><div class="ci-label">Address</div><div class="ci-value">United Kingdom</div></div>
-        </div>
-
-        <div class="contact-info-item">
-          <div class="ci-icon"><svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg></div>
-          <div><div class="ci-label">Email</div><div class="ci-value">info@acutaashealthcare.com</div></div>
-        </div>
-
-        <div class="contact-info-item">
-          <div class="ci-icon"><svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg></div>
-          <div><div class="ci-label">Phone</div><div class="ci-value">Contact us via email</div></div>
-        </div>
-
-        <div class="office-hours">
-          <div class="office-hours-title">Business Hours</div>
-          <div class="office-hours-text">Monday - Friday: 9:00 AM - 6:00 PM (GMT)<br>Weekend: Closed</div>
-        </div>
-      </div>
-
-      <div class="contact-form reveal reveal-delay-1">
-        <form id="contactForm" onsubmit="handleSubmit(event)" novalidate>
-          <div class="form-row">
-            <div class="form-group">
-              <label for="firstName">First Name</label>
-              <input type="text" id="firstName" name="firstName" required>
-            </div>
-            <div class="form-group">
-              <label for="lastName">Last Name</label>
-              <input type="text" id="lastName" name="lastName" required>
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="email">Email Address</label>
-            <input type="email" id="email" name="email" required>
-          </div>
-          <div class="form-group">
-            <label for="company">Company / Organisation</label>
-            <input type="text" id="company" name="company">
-          </div>
-          <div class="form-group custom-select-container">
-            <label for="subject">Subject</label>
-            <select id="subject" name="subject" required style="display:none;">
-              <option value="">Select a subject</option>
-              <option value="partnership">Partnership Enquiry</option>
-              <option value="product">Product Information</option>
-              <option value="careers">Careers</option>
-              <option value="other">Other</option>
-            </select>
-            <div class="custom-select">
-              <div class="custom-select-trigger">
-                <span>Select a subject</span>
-                <svg viewBox="0 0 24 24" width="20" height="20" fill="var(--gray-500)"><path d="M7 10l5 5 5-5z"/></svg>
-              </div>
-              <div class="custom-options">
-                <div class="custom-option selected" data-value="">Select a subject</div>
-                <div class="custom-option" data-value="partnership">Partnership Enquiry</div>
-                <div class="custom-option" data-value="product">Product Information</div>
-                <div class="custom-option" data-value="careers">Careers</div>
-                <div class="custom-option" data-value="other">Other</div>
-              </div>
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="4" required></textarea>
-          </div>
-          <button type="submit" class="form-submit">Send Message</button>
-        </form>
-      </div>
-    </div>
-  </div>
-</section>
 
 <!-- Footer -->
 <footer>
@@ -506,7 +410,7 @@
       <div class="footer-col-title">Company</div>
       <ul class="footer-links">
         <li><a href="#partner">Partnerships</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="contact.html">Contact</a></li>
         <li><a href="careers.html">Careers</a></li>
         <li><a href="news.html">News</a></li>
       </ul>
