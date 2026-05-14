@@ -15,27 +15,6 @@ body {
   min-height: auto !important;
 }
 
-.page-hero::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(135deg, rgba(var(--navy-rgb), 0.95) 0%, rgba(var(--navy-rgb), 0.6) 100%);
-  z-index: 0;
-}
-
-.page-hero::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-image: 
-    linear-gradient(rgba(var(--white-rgb), 0.05) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(var(--white-rgb), 0.05) 1px, transparent 1px);
-  background-size: 50px 50px;
-  opacity: 0.3;
-  pointer-events: none;
-  z-index: 1;
-}
-
 .page-hero-orb {
   position: absolute;
   border-radius: 50%;
@@ -85,7 +64,7 @@ body {
 .page-container {
   position: relative;
   max-width: 900px;
-  margin: -40px auto 100px;
+  margin: 40px auto 100px;
   background: var(--white);
   border-radius: 20px;
   padding: 60px;
