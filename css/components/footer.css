@@ -1,6 +1,6 @@
 /* ═══════════ FOOTER ═══════════ */
 footer {
-  background: #040c13; /* Very dark navy/black for solid foundation */
+  background: var(--footer-bg); /* Theme consistent solid foundation */
   padding: 60px 5% 28px;
   position: relative;
   overflow: hidden;
@@ -37,13 +37,14 @@ footer {
 .footer-links li { margin-bottom: 10px; }
 
 .footer-links a {
+  display: inline-block;
   font-size: 0.82rem;
   color: rgba(var(--white-rgb), 0.45);
   text-decoration: none;
-  transition: color var(--transition-fast);
+  transition: color var(--transition-fast), transform var(--transition-fast);
 }
 
-.footer-links a:hover { color: var(--blue-light); }
+.footer-links a:hover { color: var(--blue-light); transform: translateX(4px); }
 
 .footer-bottom {
   display: flex;

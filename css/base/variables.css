@@ -5,6 +5,7 @@
   /* --navy: #081826;
   --navy-rgb: 8, 24, 38;
   --navy-mid: #102437;
+  --footer-bg: #05111b;
 
   --blue-primary: #0891B2;
   --blue-primary-rgb: 8, 145, 178;
@@ -42,6 +43,7 @@
   /* --navy: #1A2333;
   --navy-rgb: 26, 35, 51;
   --navy-mid: #263347;
+  --footer-bg: #111827;
 
   --blue-primary: #4F46E5;
   --blue-primary-rgb: 79, 70, 229;
@@ -79,6 +81,7 @@
   /* --navy: #0B1020;
   --navy-rgb: 11, 16, 32;
   --navy-mid: #151B34;
+  --footer-bg: #050814;
 
   --blue-primary: #3B82F6;
   --blue-primary-rgb: 59, 130, 246;
@@ -116,6 +119,7 @@
   --navy: #062925;
   --navy-rgb: 6, 41, 37;
   --navy-mid: #0B3B35;
+  --footer-bg: #031412;
 
   --blue-primary: #0F766E;
   --blue-primary-rgb: 15, 118, 110;
@@ -153,6 +157,7 @@
   /* --navy: #0A1628;
   --navy-rgb: 10, 22, 40;
   --navy-mid: #132040;
+  --footer-bg: #050c1a;
   --blue-primary: #2563eb;
   --blue-primary-rgb: 37, 99, 235;
   --blue-light: #3b82f6;

@@ -28,13 +28,15 @@
   padding: 18px 22px;
   background: var(--white);
   border-radius: 12px;
+  border-radius: 12px;
   border: 1px solid var(--gray-300);
-  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast), transform var(--transition-fast);
 }
 
 .partner-feature:hover {
   border-color: var(--blue-primary);
   box-shadow: 0 4px 20px rgba(var(--blue-primary-rgb), 0.1);
+  transform: translateY(-3px);
 }
 
 .pf-icon {
@@ -47,7 +49,8 @@
   flex-shrink: 0;
 }
 
-.pf-icon svg { width: 18px; height: 18px; fill: var(--blue-primary); }
+.pf-icon svg { width: 18px; height: 18px; fill: var(--blue-primary); transition: transform 0.3s ease; }
+.partner-feature:hover .pf-icon svg { transform: scale(1.15) rotate(5deg); }
 
 .pf-title { font-weight: 600; font-size: 0.9rem; color: var(--navy); margin-bottom: 4px; }
 .pf-text { font-size: 0.8rem; color: var(--gray-500); line-height: 1.6; }

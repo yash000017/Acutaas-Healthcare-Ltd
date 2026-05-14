@@ -41,7 +41,8 @@
 .mission-card-2 .mission-icon { background: rgba(var(--white-rgb), 0.15); }
 .mission-card-3 .mission-icon { background: rgba(var(--blue-primary-rgb), 0.1); }
 
-.mission-icon svg { width: 24px; height: 24px; display: block; margin: auto; }
+.mission-icon svg { width: 24px; height: 24px; display: block; margin: auto; transition: transform 0.3s ease; }
+.mission-card:hover .mission-icon svg { transform: scale(1.15); }
 .mission-card-1 .mission-icon svg, .mission-card-2 .mission-icon svg { fill: var(--white); }
 .mission-card-3 .mission-icon svg { fill: var(--blue-primary); }
 

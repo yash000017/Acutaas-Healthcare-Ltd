@@ -21,8 +21,8 @@
 }
 
 .value-card {
-  background: rgba(var(--white-rgb), 0.03);
-  border: 1px solid rgba(var(--white-rgb), 0.06);
+  background: var(--navy-mid); /* Theme consistent solid color */
+  border: 1px solid rgba(var(--white-rgb), 0.1);
   border-radius: 14px;
   padding: 28px 24px;
   transition: background var(--transition), border-color var(--transition), transform var(--transition);
@@ -44,7 +44,8 @@
   margin-bottom: 18px;
 }
 
-.value-icon svg { width: 20px; height: 20px; fill: var(--blue-light); }
+.value-icon svg { width: 20px; height: 20px; fill: var(--blue-light); transition: transform 0.3s ease; }
+.value-card:hover .value-icon svg { transform: scale(1.15) translateY(-2px); }
 
 .value-title {
   font-family: var(--font-display);
@@ -58,4 +59,92 @@
   font-size: 0.78rem;
   color: rgba(var(--white-rgb), 0.45);
   line-height: 1.7;
+}
+
+/* ═══════════ FLIP CARDS ═══════════ */
+.value-flip-card {
+  perspective: 1500px;
+  background: transparent;
+  border: none;
+  padding: 0;
+  height: 320px;
+  border-radius: 14px;
+}
+
+.value-flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: left;
+  transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-style: preserve-3d;
+  border-radius: 14px;
+}
+
+.value-flip-card:hover .value-flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.value-flip-card-front, .value-flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 14px;
+  padding: 30px 24px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  border: 1px solid rgba(var(--white-rgb), 0.06);
+}
+
+.value-flip-card-front {
+  background: var(--navy);
+  justify-content: space-between;
+}
+.value-flip-card-front::before {
+  content: ''; position: absolute; inset: 0;
+  background: linear-gradient(180deg, rgba(var(--blue-primary-rgb), 0.1) 0%, transparent 50%);
+  border-radius: 14px; pointer-events: none; opacity: 0; transition: opacity 0.4s ease;
+}
+.value-flip-card:hover .value-flip-card-front::before { opacity: 1; }
+
+.value-flip-card-front .value-icon {
+  align-self: flex-end;
+  width: 55px; height: 55px;
+  background: transparent;
+  margin: 0; padding: 0;
+}
+.value-flip-card-front .value-icon svg { width: 45px; height: 45px; fill: rgba(var(--white-rgb), 0.4); transition: transform 0.3s ease; }
+.value-flip-card:hover .value-flip-card-front .value-icon svg { transform: scale(1.1) translateY(-3px); fill: var(--blue-light); }
+
+.value-flip-card-front .front-content { margin-top: auto; }
+.value-flip-card-front .value-title { font-size: 1.4rem; font-weight: 600; margin-bottom: 4px; }
+.value-flip-card-front .value-subtitle { font-size: 0.85rem; color: rgba(var(--white-rgb), 0.6); }
+
+.value-flip-card-back {
+  background: var(--navy);
+  transform: rotateY(180deg);
+  justify-content: space-between;
+}
+.value-flip-card-back .value-text {
+  font-size: 0.85rem; line-height: 1.7; color: rgba(var(--white-rgb), 0.85);
+  margin-top: 10px;
+}
+.value-flip-card-back .back-bottom {
+  display: flex; justify-content: space-between; align-items: flex-end; width: 100%;
+}
+.value-flip-card-back .value-title { font-size: 1.2rem; margin-bottom: 0; }
+.value-flip-card-back .value-icon { width: 40px; height: 40px; background: transparent; margin: 0; }
+.value-flip-card-back .value-icon svg { 
+  width: 35px; height: 35px; 
+  fill: var(--blue-light); 
+  transition: transform 0.4s ease, fill 0.4s ease; 
+  transition-delay: 0.2s; /* Fire slightly after flip starts */
+}
+.value-flip-card:hover .value-flip-card-back .value-icon svg { 
+  transform: scale(1.15) rotate(-5deg);
+  fill: var(--gold);
+  animation: floatSlow 3s ease-in-out infinite;
+  animation-delay: 0.8s; /* Start after flip is mostly done */
 }
