@@ -1,16 +1,28 @@
 /* ═══════════ RESPONSIVE ═══════════ */
 @media (max-width: 1024px) {
+  nav { padding: 0 5%; }
+  .nav-links { display: none; }
+  .hamburger { display: flex; }
   .values-grid { grid-template-columns: repeat(2, 1fr); }
   .footer-top { grid-template-columns: 1fr 1fr; }
 }
 
 @media (max-width: 768px) {
-  nav { padding: 0 5%; }
-  .nav-links { display: none; }
-  .hamburger { display: flex; }
 
   .hero-content { grid-template-columns: 1fr; padding: 110px 5% 70px; }
-  .hero-stats { display: none; }
+  .hero-stats, .hero-visual-col { display: none !important; }
+  
+  #home, .page-hero, body { background-attachment: scroll !important; }
+  
+  /* Fix massive zooming on tall mobile sections (like Core Values) by wrapping and repeating subtly */
+  section { 
+    background-attachment: scroll !important;
+    background-size: 300vw auto !important; 
+    background-repeat: repeat-y !important; 
+    background-position: top center !important;
+  }
+
+  #values { background-image: none !important; }
 
   .about-grid,
   .mission-cards,
@@ -18,7 +30,7 @@
   .contact-grid { grid-template-columns: 1fr; }
 
   .mission-cards { gap: 14px; }
-  .values-grid { grid-template-columns: 1fr; }
+  .values-grid { grid-template-columns: 1fr !important; }
   .footer-top { grid-template-columns: 1fr; gap: 28px; }
   .footer-bottom { flex-direction: column; text-align: center; }
   .form-row { grid-template-columns: 1fr; }

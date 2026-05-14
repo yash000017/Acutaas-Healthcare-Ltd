@@ -1,7 +1,7 @@
 /* ═══════════ ABOUT ═══════════ */
 #about { 
   background-color: var(--off-white);
-  background-image: linear-gradient(rgba(245, 250, 252, 0.95), rgba(245, 250, 252, 0.95)), url('https://images.unsplash.com/photo-1551076805-e18690c5e53b?auto=format&fit=crop&w=1920&q=80');
+  background-image: linear-gradient(rgba(var(--off-white-rgb), 0.95), rgba(var(--off-white-rgb), 0.95)), url('https://images.unsplash.com/photo-1551076805-e18690c5e53b?auto=format&fit=crop&w=1920&q=80');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;

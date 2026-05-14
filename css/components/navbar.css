@@ -75,7 +75,7 @@ nav.light-nav .hamburger span { background: var(--navy); }
 
 .nav-links {
   display: flex;
-  gap: 2rem;
+  gap: 1.5rem;
   list-style: none;
   align-items: center;
 }

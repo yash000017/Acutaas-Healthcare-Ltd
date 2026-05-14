@@ -2,7 +2,7 @@
 
   /* Cyan + Navy - Acutaas */
 
-  --navy: #081826;
+  /* --navy: #081826;
   --navy-rgb: 8, 24, 38;
   --navy-mid: #102437;
 
@@ -26,6 +26,7 @@
   --black-rgb: 0, 0, 0;
 
   --off-white: #F5FAFC;
+  --off-white-rgb: 245, 250, 252;
 
   --gray-50: #F2F7FA;
   --gray-100: #E3EDF2;
@@ -34,7 +35,7 @@
   --gray-700: #334155;
 
   --text: #162534;
-  --blue-50: #ECFEFF;
+  --blue-50: #ECFEFF; */
 
   /* Purple - Black - Acutaas */
 
@@ -62,6 +63,7 @@
   --black-rgb: 0, 0, 0;
 
   --off-white: #FAFBFC;
+  --off-white-rgb: 250, 251, 252;
 
   --gray-50: #F5F7FA;
   --gray-100: #EBEEF4;
@@ -98,6 +100,7 @@
   --black-rgb: 0, 0, 0;
 
   --off-white: #F8FAFC;
+  --off-white-rgb: 248, 250, 252;
 
   --gray-50: #F4F6F8;
   --gray-100: #E8EDF3;
@@ -110,7 +113,7 @@
 
   /* Green - Acutaas */
   
-  /* --navy: #062925;
+  --navy: #062925;
   --navy-rgb: 6, 41, 37;
   --navy-mid: #0B3B35;
 
@@ -134,6 +137,7 @@
   --black-rgb: 0, 0, 0;
 
   --off-white: #F6FBFA;
+  --off-white-rgb: 246, 251, 250;
 
   --gray-50: #F3F7F6;
   --gray-100: #E2ECEA;
@@ -142,7 +146,7 @@
   --gray-700: #304845;
 
   --text: #16302C;
-  --blue-50: #ECFEFF; */
+  --blue-50: #ECFEFF;
 
   /* Original */
 
@@ -162,6 +166,7 @@
   --black: #000000;
   --black-rgb: 0, 0, 0;
   --off-white: #F7F9F8;
+  --off-white-rgb: 247, 249, 248;
   --gray-50: #f8fafc;
   --gray-100: #F0F3F2;
   --gray-300: #C2CCC8;
