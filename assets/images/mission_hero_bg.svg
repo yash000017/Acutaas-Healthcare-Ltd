@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+  <defs>
+    <radialGradient id="missionGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#4F46E5" stop-opacity="0.08" />
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+
+  <rect width="1920" height="1080" fill="#FFFFFF" />
+  <circle cx="960" cy="540" r="700" fill="url(#missionGlow)" />
+
+  <!-- Target Rings (representing Aim/Focus) -->
+  <g transform="translate(960, 540)" opacity="0.12">
+    <circle cx="0" cy="0" r="100" fill="none" stroke="#4F46E5" stroke-width="1.5" stroke-dasharray="5,5" />
+    <circle cx="0" cy="0" r="250" fill="none" stroke="#818CF8" stroke-width="2" />
+    <circle cx="0" cy="0" r="400" fill="none" stroke="#4F46E5" stroke-width="1" stroke-dasharray="10,5" />
+    <circle cx="0" cy="0" r="550" fill="none" stroke="#cbd5e1" stroke-width="1.5" />
+    <!-- Crosshairs -->
+    <line x1="-600" y1="0" x2="-50" y2="0" stroke="#cbd5e1" stroke-width="1.5" />
+    <line x1="50" y1="0" x2="600" y2="0" stroke="#cbd5e1" stroke-width="1.5" />
+    <line x1="0" y1="-600" x2="0" y2="-50" stroke="#cbd5e1" stroke-width="1.5" />
+    <line x1="0" y1="50" x2="0" y2="600" stroke="#cbd5e1" stroke-width="1.5" />
+  </g>
+
+  <!-- Left Side: Global Healthcare Network (representing outreach) -->
+  <g transform="translate(100, 200)" opacity="0.08">
+    <circle cx="200" cy="200" r="12" fill="#4F46E5" />
+    <circle cx="400" cy="150" r="8" fill="#818CF8" />
+    <circle cx="350" cy="350" r="10" fill="#C9A86A" />
+    <circle cx="150" cy="380" r="6" fill="#cbd5e1" />
+    <circle cx="50" cy="250" r="9" fill="#818CF8" />
+    <path d="M 200,200 L 400,150 M 200,200 L 350,350 M 200,200 L 150,380 M 200,200 L 50,250 M 400,150 L 350,350 M 150,380 L 350,350" fill="none" stroke="#4F46E5" stroke-width="2" />
+    <!-- Pulse indicators -->
+    <circle cx="200" cy="200" r="24" fill="none" stroke="#4F46E5" stroke-width="1" stroke-dasharray="4,2" />
+  </g>
+
+  <!-- Right Side: Molecule and Growth Chart (representing aims and research achievements) -->
+  <g transform="translate(1400, 300)" opacity="0.08">
+    <!-- Trend Line -->
+    <path d="M 50,400 L 150,300 L 250,350 L 350,200 L 450,100" fill="none" stroke="#C9A86A" stroke-width="4" stroke-linecap="round" />
+    <circle cx="50" cy="400" r="8" fill="#C9A86A" />
+    <circle cx="150" cy="300" r="8" fill="#C9A86A" />
+    <circle cx="250" cy="350" r="8" fill="#C9A86A" />
+    <circle cx="350" cy="200" r="8" fill="#C9A86A" />
+    <circle cx="450" cy="100" r="10" fill="#C9A86A" />
+    
+    <!-- Medical Cross inside a shield -->
+    <g transform="translate(300, 300)">
+      <path d="M 0,10 C 0,10 40,0 60,0 C 80,0 120,10 120,10 C 120,10 120,60 120,80 C 120,110 60,140 60,140 C 60,140 0,110 0,80 C 0,60 0,10 0,10 Z" fill="none" stroke="#4F46E5" stroke-width="3" />
+      <path d="M 50,40 L 70,40 M 60,30 L 60,50" stroke="#4F46E5" stroke-width="3" stroke-linecap="round" />
+    </g>
+  </g>
+</svg>

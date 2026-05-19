@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+  <defs>
+    <linearGradient id="blueGlow2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#818CF8" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#4F46E5" stop-opacity="0" />
+    </linearGradient>
+    <linearGradient id="goldGlow2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E6C98F" stop-opacity="0.25" />
+      <stop offset="100%" stop-color="#C9A86A" stop-opacity="0" />
+    </linearGradient>
+    <radialGradient id="centerGlow2" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#4F46E5" stop-opacity="0.15" />
+      <stop offset="100%" stop-color="#1A2333" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+
+  <!-- Background Base -->
+  <rect width="1920" height="1080" fill="#1A2333" />
+  <circle cx="960" cy="540" r="800" fill="url(#centerGlow2)" />
+
+  <!-- EKG line spanning across the middle -->
+  <path d="M 0,540 L 400,540 L 430,540 L 460,460 L 490,620 L 520,340 L 550,680 L 580,500 L 610,540 L 1310,540 L 1340,540 L 1370,460 L 1400,620 L 1430,340 L 1460,680 L 1490,500 L 1520,540 L 1920,540" 
+        fill="none" stroke="#818CF8" stroke-width="2" opacity="0.15" stroke-linecap="round" stroke-linejoin="round" />
+
+  <!-- LEFT SIDE: Security Shield + Medical Lock -->
+  <g transform="translate(150, 240)">
+    <path d="M 50,50 C 50,50 180,10 230,10 C 280,10 410,50 410,50 C 410,50 410,180 410,220 C 410,330 230,400 230,400 C 230,400 50,330 50,220 C 50,180 50,50 50,50 Z" 
+          fill="url(#blueGlow2)" stroke="#818CF8" stroke-width="4" opacity="0.3" />
+    
+    <!-- Lock inside Shield -->
+    <g transform="translate(160, 110)">
+      <!-- Lock Shackle -->
+      <path d="M 30,50 L 30,30 C 30,10 90,10 90,30 L 90,50" fill="none" stroke="url(#goldGlow2)" stroke-width="12" stroke-linecap="round" opacity="0.5" />
+      <!-- Lock Body -->
+      <rect x="0" y="45" width="120" height="90" rx="20" fill="#1A2333" stroke="#cbd5e1" stroke-width="4" opacity="0.5" />
+      <!-- Stethoscope/Medical check mark inside Lock -->
+      <circle cx="60" cy="90" r="20" fill="none" stroke="#818CF8" stroke-width="3" opacity="0.6" />
+      <path d="M 52,90 L 58,96 L 70,82" fill="none" stroke="#818CF8" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" opacity="0.6" />
+    </g>
+  </g>
+
+  <!-- RIGHT SIDE: Medical Data / Network Nodes (represent privacy of data) -->
+  <g transform="translate(1350, 240)">
+    <!-- Document Folders / Database lines -->
+    <rect x="50" y="80" width="300" height="200" rx="16" fill="url(#blueGlow2)" stroke="#818CF8" stroke-width="2" opacity="0.25" />
+    <path d="M 80,130 L 320,130" stroke="#cbd5e1" stroke-width="4" stroke-linecap="round" opacity="0.2" />
+    <path d="M 80,180 L 260,180" stroke="#cbd5e1" stroke-width="4" stroke-linecap="round" opacity="0.2" />
+    <path d="M 80,230 L 290,230" stroke="#cbd5e1" stroke-width="4" stroke-linecap="round" opacity="0.2" />
+
+    <!-- Connected nodes overlay (Data streams) -->
+    <line x1="120" y1="280" x2="220" y2="350" stroke="#C9A86A" stroke-width="3" opacity="0.3" />
+    <line x1="220" y1="350" x2="320" y2="290" stroke="#818CF8" stroke-width="3" opacity="0.3" />
+    <circle cx="120" cy="280" r="10" fill="#cbd5e1" opacity="0.3" />
+    <circle cx="220" cy="350" r="14" fill="#C9A86A" opacity="0.5" />
+    <circle cx="320" cy="290" r="10" fill="#818CF8" opacity="0.3" />
+    <!-- Medical Cross on gold node -->
+    <path d="M 215,350 L 225,350 M 220,345 L 220,355" stroke="#ffffff" stroke-width="3" stroke-linecap="round" />
+  </g>
+
+  <!-- Decorative Molecular grids in corners -->
+  <g opacity="0.15">
+    <line x1="1700" y1="100" x2="1800" y2="200" stroke="#cbd5e1" stroke-width="2" />
+    <circle cx="1700" cy="100" r="6" fill="#C9A86A" />
+    <circle cx="1800" cy="200" r="8" fill="#818CF8" />
+  </g>
+</svg>

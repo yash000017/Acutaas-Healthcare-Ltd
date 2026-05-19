@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2000 1080" width="2000" height="1080">
+  <defs>
+    <linearGradient id="heroHelix" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4F46E5" stop-opacity="0.18" />
+      <stop offset="50%" stop-color="#818CF8" stop-opacity="0.1" />
+      <stop offset="100%" stop-color="#C9A86A" stop-opacity="0.15" />
+    </linearGradient>
+    <radialGradient id="heroGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#4F46E5" stop-opacity="0.2" />
+      <stop offset="100%" stop-color="#1A2333" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+
+  <rect width="2000" height="1080" fill="#1A2333" />
+  <circle cx="1000" cy="540" r="900" fill="url(#heroGlow)" />
+
+  <!-- EKG Waves -->
+  <path d="M 0,540 L 400,540 L 430,500 L 460,580 L 490,380 L 520,700 L 550,540 L 1450,540 L 1480,500 L 1510,580 L 1540,380 L 1570,700 L 1600,540 L 2000,540" fill="none" stroke="#818CF8" stroke-width="2.5" opacity="0.12" stroke-linecap="round" stroke-linejoin="round" />
+
+  <!-- Sweeping DNA Strand on the Right -->
+  <g transform="translate(1300, 100)">
+    <path d="M 100,0 C 300,200 -100,400 100,600 C 300,800 -100,1000 100,1200" fill="none" stroke="url(#heroHelix)" stroke-width="8" />
+    <path d="M 100,0 C -100,200 300,400 100,600 C -100,800 300,1000 100,1200" fill="none" stroke="url(#heroHelix)" stroke-width="8" />
+    <!-- Nodes -->
+    <circle cx="200" cy="150" r="10" fill="#4F46E5" opacity="0.25" />
+    <circle cx="0" cy="150" r="10" fill="#cbd5e1" opacity="0.25" />
+    <circle cx="0" cy="450" r="10" fill="#C9A86A" opacity="0.25" />
+    <circle cx="200" cy="450" r="10" fill="#E6C98F" opacity="0.25" />
+  </g>
+
+  <!-- Left Side: Laboratory Science Connections -->
+  <g transform="translate(100, 150)" opacity="0.15">
+    <!-- Hexagonal lattice -->
+    <polygon points="150,50 250,100 250,200 150,250 50,200 50,100" fill="none" stroke="#818CF8" stroke-width="2" />
+    <polygon points="250,200 350,250 350,350 250,400 150,350 150,200" fill="none" stroke="#4F46E5" stroke-width="2" />
+    <circle cx="150" cy="50" r="8" fill="#4F46E5" />
+    <circle cx="250" cy="100" r="8" fill="#818CF8" />
+    <circle cx="50" cy="100" r="8" fill="#C9A86A" />
+    <circle cx="350" cy="350" r="8" fill="#E6C98F" />
+  </g>
+</svg>

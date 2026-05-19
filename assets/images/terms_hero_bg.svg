@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+  <defs>
+    <linearGradient id="blueGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#818CF8" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#4F46E5" stop-opacity="0" />
+    </linearGradient>
+    <linearGradient id="goldGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E6C98F" stop-opacity="0.25" />
+      <stop offset="100%" stop-color="#C9A86A" stop-opacity="0" />
+    </linearGradient>
+    <radialGradient id="centerGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#4F46E5" stop-opacity="0.15" />
+      <stop offset="100%" stop-color="#1A2333" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+
+  <!-- Background Base -->
+  <rect width="1920" height="1080" fill="#1A2333" />
+  <circle cx="960" cy="540" r="800" fill="url(#centerGlow)" />
+
+  <!-- EKG line spanning across the middle -->
+  <path d="M 0,540 L 400,540 L 430,540 L 460,460 L 490,620 L 520,340 L 550,680 L 580,500 L 610,540 L 1310,540 L 1340,540 L 1370,460 L 1400,620 L 1430,340 L 1460,680 L 1490,500 L 1520,540 L 1920,540" 
+        fill="none" stroke="#818CF8" stroke-width="2" opacity="0.15" stroke-linecap="round" stroke-linejoin="round" />
+
+  <!-- LEFT SIDE: Legal Document / Terms Checklist -->
+  <g transform="translate(150, 240)">
+    <!-- Clipboard/Document body -->
+    <rect x="50" y="80" width="320" height="440" rx="20" fill="none" stroke="#cbd5e1" stroke-width="3" opacity="0.25" />
+    <rect x="50" y="80" width="320" height="440" rx="20" fill="url(#blueGlow)" />
+    <!-- Clip -->
+    <path d="M 160,50 L 260,50 C 270,50 270,80 260,80 L 160,80 C 150,80 150,50 160,50 Z" fill="none" stroke="#C9A86A" stroke-width="3" opacity="0.4" />
+    <!-- Lines inside document -->
+    <line x1="90" y1="150" x2="330" y2="150" stroke="#818CF8" stroke-width="6" stroke-linecap="round" opacity="0.4" />
+    <line x1="130" y1="210" x2="330" y2="210" stroke="#cbd5e1" stroke-width="5" stroke-linecap="round" opacity="0.3" />
+    <circle cx="100" cy="210" r="8" fill="#C9A86A" opacity="0.5" />
+    <line x1="130" y1="270" x2="290" y2="270" stroke="#cbd5e1" stroke-width="5" stroke-linecap="round" opacity="0.3" />
+    <circle cx="100" cy="270" r="8" fill="#C9A86A" opacity="0.5" />
+    <line x1="130" y1="330" x2="310" y2="330" stroke="#cbd5e1" stroke-width="5" stroke-linecap="round" opacity="0.3" />
+    <circle cx="100" cy="330" r="8" fill="#C9A86A" opacity="0.5" />
+    <!-- Stamp/Check -->
+    <circle cx="290" cy="410" r="30" fill="none" stroke="#818CF8" stroke-width="3" opacity="0.3" />
+    <path d="M 276,410 L 286,420 L 304,400" fill="none" stroke="#818CF8" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" opacity="0.5" />
+  </g>
+
+  <!-- RIGHT SIDE: Stethoscope & Healthcare Protection -->
+  <g transform="translate(1350, 240)">
+    <!-- Shield -->
+    <path d="M 50,50 C 50,50 150,10 200,10 C 250,10 350,50 350,50 C 350,50 350,180 350,220 C 350,320 200,380 200,380 C 200,380 50,320 50,220 C 50,180 50,50 50,50 Z" 
+          fill="url(#blueGlow)" stroke="#818CF8" stroke-width="3" opacity="0.3" />
+    <!-- Stethoscope curving around inside -->
+    <path d="M 120,100 C 50,200 350,200 280,100 C 230,30 200,300 200,320" 
+          fill="none" stroke="#C9A86A" stroke-width="6" stroke-linecap="round" opacity="0.4" />
+    <!-- Chestpiece -->
+    <circle cx="200" cy="320" r="25" fill="#1A2333" stroke="#cbd5e1" stroke-width="4" opacity="0.5" />
+    <circle cx="200" cy="320" r="15" fill="none" stroke="#C9A86A" stroke-width="3" opacity="0.5" />
+    <!-- Medical Cross in Center of Shield -->
+    <path d="M 190,120 L 210,120 L 210,140 L 230,140 L 230,160 L 210,160 L 210,180 L 190,180 L 190,160 L 170,160 L 170,140 L 190,140 Z" fill="#E6C98F" opacity="0.6" />
+  </g>
+
+  <!-- Decorative Molecular grids in corners -->
+  <g opacity="0.15">
+    <line x1="100" y1="100" x2="200" y2="150" stroke="#cbd5e1" stroke-width="2" />
+    <line x1="200" y1="150" x2="150" y2="250" stroke="#cbd5e1" stroke-width="2" />
+    <circle cx="100" cy="100" r="6" fill="#818CF8" />
+    <circle cx="200" cy="150" r="8" fill="#C9A86A" />
+    <circle cx="150" cy="250" r="6" fill="#818CF8" />
+  </g>
+</svg>

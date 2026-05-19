@@ -1,319 +1,462 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Compliance | Acutaas Healthcare Ltd</title>
-<link rel="icon" type="image/png" href="./assets/images/logo-capsule.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="./css/base/variables.css">
-<link rel="stylesheet" href="./css/base/global.css">
-<link rel="stylesheet" href="./css/base/animations.css">
-<link rel="stylesheet" href="./css/base/common.css">
-<link rel="stylesheet" href="./css/components/navbar.css">
-<link rel="stylesheet" href="./css/components/hero.css">
-<link rel="stylesheet" href="./css/components/about.css">
-<link rel="stylesheet" href="./css/components/mission.css">
-<link rel="stylesheet" href="./css/components/values.css">
-<link rel="stylesheet" href="./css/components/partner.css">
-<link rel="stylesheet" href="./css/components/cta.css">
-<link rel="stylesheet" href="./css/components/contact.css">
-<link rel="stylesheet" href="./css/components/footer.css">
-<link rel="stylesheet" href="./css/base/responsive.css">
-  <link rel="stylesheet" href="./css/components/page-layout.css">
-</head>
-<body>
-
-<!-- Navigation -->
-<nav id="navbar">
-  <a href="index.html#home" class="nav-logo">
-    <div class="nav-logo-icon">
-      <img src="./assets/images/logo-capsule.png" alt="Acutaas Logo" class="logo-img" />
-    </div>
-    <div>
-      <span class="nav-logo-text">Acutaas</span>
-      <span class="nav-logo-sub">Healthcare Ltd.</span>
-    </div>
-  </a>
-
-  <ul class="nav-links">
-    <li><a href="index.html#home">Home</a></li>
-    <li><a href="index.html#about">About</a></li>
-    <li><a href="index.html#mission">Mission</a></li>
-    <li><a href="index.html#values">Values</a></li>
-    <li><a href="index.html#partner">Partner</a></li>
-    <li><a href="careers.html">Careers</a></li>
-    <li><a href="news.html">News</a></li>
-    <li><a href="contact.html" class="nav-cta">Contact Us</a></li>
-  </ul>
-
-  <button class="hamburger" onclick="toggleMenu()">
-    <span></span><span></span><span></span>
-  </button>
-</nav>
-
-<div class="mobile-menu" id="mobileMenu">
-  <a href="index.html#home" onclick="toggleMenu()">Home</a>
-  <a href="index.html#about" onclick="toggleMenu()">About Us</a>
-  <a href="index.html#mission" onclick="toggleMenu()">Mission & Aims</a>
-  <a href="index.html#values" onclick="toggleMenu()">Our Values</a>
-  <a href="index.html#partner" onclick="toggleMenu()">Partnerships</a>
-  <a href="careers.html" onclick="toggleMenu()">Careers</a>
-  <a href="news.html" onclick="toggleMenu()">News</a>
-  <a href="contact.html" onclick="toggleMenu()">Contact Us</a>
-</div>
-<!-- Premium Internal Page Layout -->
-<section class="page-hero" id="home" style="background-image: linear-gradient(rgba(var(--navy-rgb), 0.85), rgba(var(--navy-rgb), 0.85)), url('https://images.unsplash.com/photo-1556761175-5973dc0f32b7?auto=format&fit=crop&w=2000&q=80');">
-  <div class="hero-bg-grid"></div>
-  <div class="hero-orb hero-orb-1"></div>
-  <div class="hero-orb hero-orb-2"></div>
-  <div class="section-anim-container">
-    <div class="floating-capsule" style="top: 15%; right: 8%; animation-delay: 0s;"><div class="capsule-body"></div></div>
-    <div class="floating-capsule" style="top: 80%; right: 22%; animation-delay: -2s; transform: scale(0.7);"><div class="capsule-body"></div></div>
-    <div class="floating-capsule" style="top: 40%; left: 4%; animation-delay: -4s; transform: scale(0.5);"><div class="capsule-body"></div></div>
-    <div class="molecule-dot blue" style="top: 20%; left: 20%; animation-delay: 0s;"></div>
-    <div class="molecule-dot gold" style="top: 65%; left: 12%; animation-delay: -1s;"></div>
-    <div class="molecule-dot blue" style="top: 40%; right: 30%; animation-delay: -2s;"></div>
-    <div class="medical-cross-small" style="top: 12%; left: 18%;"></div>
-    <div class="medical-cross-small" style="bottom: 25%; right: 12%; animation-direction: reverse;"></div>
-    <div class="heartbeat-line-subtle">
-      <svg viewBox="0 0 1200 40" preserveAspectRatio="none">
-        <path class="heartbeat-path" d="M0,20 L100,20 L120,20 L135,8 L150,32 L165,4 L180,36 L195,20 L220,20 L400,20 L420,20 L435,8 L450,32 L465,4 L480,36 L495,20 L520,20 L700,20 L720,20 L735,8 L750,32 L765,4 L780,36 L795,20 L820,20 L1000,20 L1020,20 L1035,8 L1050,32 L1065,4 L1080,36 L1095,20 L1200,20"/>
-      </svg>
-    </div>
-  </div>
-  <div class="page-hero-content">
-    <div class="page-hero-subtitle">Our Standards</div>
-    <h1 class="page-hero-title">Compliance & Regulatory</h1>
-  </div>
-</section>
-
-<section id="content" style="position:relative; overflow:hidden; padding-bottom: 50px;">
-  <div class="section-anim-container">
-    <div class="floating-pill" style="top: 15%; right: 5%; animation-delay: 0s;"></div>
-    <div class="floating-pill" style="bottom: 20%; left: 3%; animation-delay: -2.5s;"></div>
-    <div class="molecule-dot blue" style="top: 30%; right: 15%; animation-delay: -1s;"></div>
-    <div class="molecule-dot gold" style="bottom: 35%; right: 8%; animation-delay: -2s;"></div>
-    <div class="medical-cross-small" style="top: 20%; right: 20%; animation-delay: -5s;"></div>
-    <div class="glow-orb" style="width: 200px; height: 200px; background: var(--blue-primary); opacity: 0.04; top: 10%; right: -50px;"></div>
-  </div>
-  <div class="page-container reveal">
-    <div class="page-content">
-      
-<h2>1. Regulatory Adherence</h2>
-<p>Acutaas Healthcare Ltd operates strictly within the guidelines and regulations mandated by the Medicines and Healthcare products Regulatory Agency (MHRA) and the European Medicines Agency (EMA).</p>
-<h2>2. Quality Assurance</h2>
-<p>We maintain a rigorous Quality Management System (QMS) ensuring all generic medicines and repurposed drugs meet the highest standards.</p>
-
-    </div>
-  </div>
-</section>
-<footer>
-  <!-- Footer Animations -->
-  <div class="section-anim-container">
-    <div class="molecule-dot gold" style="top: 20%; left: 5%; animation-delay: 0s; opacity: 0.1;"></div>
-    <div class="molecule-dot blue" style="top: 40%; right: 8%; animation-delay: -1.5s; opacity: 0.08;"></div>
-    <div class="glow-orb" style="width: 180px; height: 180px; background: var(--blue-primary); opacity: 0.04; bottom: -40px; right: 10%;"></div>
-  </div>
-
-  <div class="footer-top">
-    <div>
-      <a href="index.html#home" class="nav-logo" style="margin-bottom: 10px;">
-        <div class="nav-logo-icon"><img src="./assets/images/logo-capsule.png" alt="Acutaas Logo" class="logo-img" /></div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Compliance | Acutaas Healthcare Ltd</title>
+    <link rel="icon" type="image/png" href="./assets/images/logo-capsule.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/base/variables.css" />
+    <link rel="stylesheet" href="./css/base/global.css" />
+    <link rel="stylesheet" href="./css/base/animations.css" />
+    <link rel="stylesheet" href="./css/base/common.css" />
+    <link rel="stylesheet" href="./css/components/navbar.css" />
+    <link rel="stylesheet" href="./css/components/hero.css" />
+    <link rel="stylesheet" href="./css/components/about.css" />
+    <link rel="stylesheet" href="./css/components/mission.css" />
+    <link rel="stylesheet" href="./css/components/values.css" />
+    <link rel="stylesheet" href="./css/components/partner.css" />
+    <link rel="stylesheet" href="./css/components/cta.css" />
+    <link rel="stylesheet" href="./css/components/contact.css" />
+    <link rel="stylesheet" href="./css/components/footer.css" />
+    <link rel="stylesheet" href="./css/base/responsive.css" />
+    <link rel="stylesheet" href="./css/components/page-layout.css" />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav id="navbar">
+      <a href="index.html#home" class="nav-logo">
+        <div class="nav-logo-icon">
+          <img
+            src="./assets/images/logo-capsule.png"
+            alt="Acutaas Logo"
+            class="logo-img"
+          />
+        </div>
         <div>
           <span class="nav-logo-text">Acutaas</span>
           <span class="nav-logo-sub">Healthcare Ltd.</span>
         </div>
       </a>
-      <p class="footer-brand-desc">An innovative pharmaceutical company committed to the commercialisation of generic medicines and patient-centric healthcare solutions.</p>
-    </div>
 
-    <div>
-      <div class="footer-col-title">Navigation</div>
-      <ul class="footer-links">
+      <ul class="nav-links">
         <li><a href="index.html#home">Home</a></li>
-        <li><a href="index.html#about">About Us</a></li>
-        <li><a href="index.html#mission">Mission & Vision</a></li>
-        <li><a href="index.html#values">Our Values</a></li>
-      </ul>
-    </div>
-
-    <div>
-      <div class="footer-col-title">Company</div>
-      <ul class="footer-links">
-        <li><a href="index.html#partner">Partnerships</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#mission">Mission</a></li>
+        <li><a href="index.html#values">Values</a></li>
+        <li><a href="index.html#partner">Partner</a></li>
         <li><a href="careers.html">Careers</a></li>
         <li><a href="news.html">News</a></li>
+        <li><a href="contact.html" class="nav-cta">Contact Us</a></li>
       </ul>
+
+      <button class="hamburger" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="index.html#home" onclick="toggleMenu()">Home</a>
+      <a href="index.html#about" onclick="toggleMenu()">About Us</a>
+      <a href="index.html#mission" onclick="toggleMenu()">Mission & Aims</a>
+      <a href="index.html#values" onclick="toggleMenu()">Our Values</a>
+      <a href="index.html#partner" onclick="toggleMenu()">Partnerships</a>
+      <a href="careers.html" onclick="toggleMenu()">Careers</a>
+      <a href="news.html" onclick="toggleMenu()">News</a>
+      <a href="contact.html" onclick="toggleMenu()">Contact Us</a>
     </div>
+    <!-- Premium Internal Page Layout -->
+    <section
+      class="page-hero"
+      id="home"
+      style="
+        background-image:
+          linear-gradient(
+            rgba(var(--navy-rgb), 0.85),
+            rgba(var(--navy-rgb), 0.85)
+          ),
+          url(&quot;./assets/images/compliance-hero-bg.png&quot;);
+      "
+    >
+      <div class="hero-bg-grid"></div>
+      <div class="hero-orb hero-orb-1"></div>
+      <div class="hero-orb hero-orb-2"></div>
+      <div class="section-anim-container">
+        <div
+          class="floating-capsule"
+          style="top: 15%; right: 8%; animation-delay: 0s"
+        >
+          <div class="capsule-body"></div>
+        </div>
+        <div
+          class="floating-capsule"
+          style="
+            top: 80%;
+            right: 22%;
+            animation-delay: -2s;
+            transform: scale(0.7);
+          "
+        >
+          <div class="capsule-body"></div>
+        </div>
+        <div
+          class="floating-capsule"
+          style="
+            top: 40%;
+            left: 4%;
+            animation-delay: -4s;
+            transform: scale(0.5);
+          "
+        >
+          <div class="capsule-body"></div>
+        </div>
+        <div
+          class="molecule-dot blue"
+          style="top: 20%; left: 20%; animation-delay: 0s"
+        ></div>
+        <div
+          class="molecule-dot gold"
+          style="top: 65%; left: 12%; animation-delay: -1s"
+        ></div>
+        <div
+          class="molecule-dot blue"
+          style="top: 40%; right: 30%; animation-delay: -2s"
+        ></div>
+        <div class="medical-cross-small" style="top: 12%; left: 18%"></div>
+        <div
+          class="medical-cross-small"
+          style="bottom: 25%; right: 12%; animation-direction: reverse"
+        ></div>
+        <div class="heartbeat-line-subtle">
+          <svg viewBox="0 0 1200 40" preserveAspectRatio="none">
+            <path
+              class="heartbeat-path"
+              d="M0,20 L100,20 L120,20 L135,8 L150,32 L165,4 L180,36 L195,20 L220,20 L400,20 L420,20 L435,8 L450,32 L465,4 L480,36 L495,20 L520,20 L700,20 L720,20 L735,8 L750,32 L765,4 L780,36 L795,20 L820,20 L1000,20 L1020,20 L1035,8 L1050,32 L1065,4 L1080,36 L1095,20 L1200,20"
+            />
+          </svg>
+        </div>
+      </div>
+      <div class="page-hero-content">
+        <div class="page-hero-subtitle">Our Standards</div>
+        <h1 class="page-hero-title">Compliance & Regulatory</h1>
+      </div>
+    </section>
 
-    <div>
-      <div class="footer-col-title">Legal</div>
-      <ul class="footer-links">
-        <li><a href="privacy.html">Privacy Policy</a></li>
-        <li><a href="terms.html">Terms of Service</a></li>
-        <li><a href="compliance.html">Compliance</a></li>
-      </ul>
-    </div>
-  </div>
+    <section
+      id="content"
+      style="position: relative; overflow: hidden; padding-bottom: 50px"
+    >
+      <div class="section-anim-container">
+        <div
+          class="floating-pill"
+          style="top: 15%; right: 5%; animation-delay: 0s"
+        ></div>
+        <div
+          class="floating-pill"
+          style="bottom: 20%; left: 3%; animation-delay: -2.5s"
+        ></div>
+        <div
+          class="molecule-dot blue"
+          style="top: 30%; right: 15%; animation-delay: -1s"
+        ></div>
+        <div
+          class="molecule-dot gold"
+          style="bottom: 35%; right: 8%; animation-delay: -2s"
+        ></div>
+        <div
+          class="medical-cross-small"
+          style="top: 20%; right: 20%; animation-delay: -5s"
+        ></div>
+        <div
+          class="glow-orb"
+          style="
+            width: 200px;
+            height: 200px;
+            background: var(--blue-primary);
+            opacity: 0.04;
+            top: 10%;
+            right: -50px;
+          "
+        ></div>
+      </div>
+      <div class="page-container reveal">
+        <div class="page-content">
+          <h2>1. Regulatory Adherence</h2>
+          <p>
+            Acutaas Healthcare Ltd operates strictly within the guidelines and
+            regulations mandated by the Medicines and Healthcare products
+            Regulatory Agency (MHRA) and the European Medicines Agency (EMA).
+          </p>
+          <h2>2. Quality Assurance</h2>
+          <p>
+            We maintain a rigorous Quality Management System (QMS) ensuring all
+            generic medicines and repurposed drugs meet the highest standards.
+          </p>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <!-- Footer Animations -->
+      <div class="section-anim-container">
+        <div
+          class="molecule-dot gold"
+          style="top: 20%; left: 5%; animation-delay: 0s; opacity: 0.1"
+        ></div>
+        <div
+          class="molecule-dot blue"
+          style="top: 40%; right: 8%; animation-delay: -1.5s; opacity: 0.08"
+        ></div>
+        <div
+          class="glow-orb"
+          style="
+            width: 180px;
+            height: 180px;
+            background: var(--blue-primary);
+            opacity: 0.04;
+            bottom: -40px;
+            right: 10%;
+          "
+        ></div>
+      </div>
 
-  <div class="footer-bottom">
-    <p class="footer-copy">&copy; 2026 Acutaas Healthcare Ltd. All rights reserved.</p>
-    <div class="footer-legal">
-      <a href="privacy.html">Privacy</a>
-      <a href="terms.html">Terms</a>
-    </div>
-  </div>
-</footer>
+      <div class="footer-top">
+        <div>
+          <a
+            href="index.html#home"
+            class="nav-logo"
+            style="margin-bottom: 10px"
+          >
+            <div class="nav-logo-icon">
+              <img
+                src="./assets/images/logo-capsule.png"
+                alt="Acutaas Logo"
+                class="logo-img"
+              />
+            </div>
+            <div>
+              <span class="nav-logo-text">Acutaas</span>
+              <span class="nav-logo-sub">Healthcare Ltd.</span>
+            </div>
+          </a>
+          <p class="footer-brand-desc">
+            An innovative pharmaceutical company committed to the
+            commercialisation of generic medicines and patient-centric
+            healthcare solutions.
+          </p>
+        </div>
 
-<script>
-// Mobile menu toggle
-function toggleMenu() {
-  document.getElementById('mobileMenu').classList.toggle('open');
-}
+        <div>
+          <div class="footer-col-title">Navigation</div>
+          <ul class="footer-links">
+            <li><a href="index.html#home">Home</a></li>
+            <li><a href="index.html#about">About Us</a></li>
+            <li><a href="index.html#mission">Mission & Vision</a></li>
+            <li><a href="index.html#values">Our Values</a></li>
+          </ul>
+        </div>
 
-// Navbar scroll effect
-window.addEventListener('scroll', function() {
-  const navbar = document.getElementById('navbar');
-  const sections = document.querySelectorAll('section');
-  const scrollTop = window.scrollY;
+        <div>
+          <div class="footer-col-title">Company</div>
+          <ul class="footer-links">
+            <li><a href="index.html#partner">Partnerships</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="careers.html">Careers</a></li>
+            <li><a href="news.html">News</a></li>
+          </ul>
+        </div>
 
-  if (scrollTop > 50) {
-    navbar.classList.add('scrolled');
-  } else {
-    navbar.classList.remove('scrolled');
-  }
+        <div>
+          <div class="footer-col-title">Legal</div>
+          <ul class="footer-links">
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms of Service</a></li>
+            <li><a href="compliance.html">Compliance</a></li>
+          </ul>
+        </div>
+      </div>
 
-  // Check if we're on a light section
-  let onLightSection = false;
-  sections.forEach(section => {
-    if (section.id !== 'home' && section.id !== 'values' && section.id !== 'cta') {
-      const rect = section.getBoundingClientRect();
-      if (rect.top <= 80 && rect.bottom > 80) {
-        onLightSection = true;
+      <div class="footer-bottom">
+        <p class="footer-copy">
+          &copy; 2026 Acutaas Healthcare Ltd. All rights reserved.
+        </p>
+        <div class="footer-legal">
+          <a href="privacy.html">Privacy</a>
+          <a href="terms.html">Terms</a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Mobile menu toggle
+      function toggleMenu() {
+        document.getElementById("mobileMenu").classList.toggle("open");
       }
-    }
-  });
 
-  if (onLightSection && scrollTop > 50) {
-    navbar.classList.add('light-nav');
-  } else {
-    navbar.classList.remove('light-nav');
-  }
-});
+      // Navbar scroll effect
+      window.addEventListener("scroll", function () {
+        const navbar = document.getElementById("navbar");
+        const sections = document.querySelectorAll("section");
+        const scrollTop = window.scrollY;
 
-// Scroll reveal
-function reveal() {
-  const reveals = document.querySelectorAll('.reveal');
-  reveals.forEach(el => {
-    const windowHeight = window.innerHeight;
-    const elementTop = el.getBoundingClientRect().top;
-    const elementVisible = 120;
-    if (elementTop < windowHeight - elementVisible) {
-      el.classList.add('visible');
-    }
-  });
-}
-
-window.addEventListener('scroll', reveal);
-window.addEventListener('load', reveal);
-
-// Form validation and Custom Select setup
-document.addEventListener('DOMContentLoaded', () => {
-  const form = document.getElementById('contactForm');
-  
-  // Custom Select Logic
-  const customSelects = document.querySelectorAll('.custom-select-container');
-  customSelects.forEach(container => {
-    const select = container.querySelector('select');
-    const trigger = container.querySelector('.custom-select-trigger');
-    const triggerText = trigger.querySelector('span');
-    const options = container.querySelectorAll('.custom-option');
-    
-    trigger.addEventListener('click', () => {
-      container.classList.toggle('open');
-    });
-    
-    options.forEach(option => {
-      option.addEventListener('click', () => {
-        select.value = option.getAttribute('data-value');
-        select.dispatchEvent(new Event('input', { bubbles: true }));
-        
-        triggerText.textContent = option.textContent;
-        options.forEach(opt => opt.classList.remove('selected'));
-        option.classList.add('selected');
-        
-        container.classList.remove('open');
-      });
-    });
-    
-    document.addEventListener('click', (e) => {
-      if (!container.contains(e.target)) {
-        container.classList.remove('open');
-      }
-    });
-  });
-
-  if (form) {
-    // Clear error state when the user types or selects
-    form.addEventListener('input', (e) => {
-      if (e.target.classList.contains('invalid')) {
-        e.target.classList.remove('invalid');
-        if (e.target.tagName === 'SELECT' && e.target.parentElement.classList.contains('custom-select-container')) {
-          e.target.parentElement.querySelector('.custom-select-trigger').classList.remove('invalid');
+        if (scrollTop > 50) {
+          navbar.classList.add("scrolled");
+        } else {
+          navbar.classList.remove("scrolled");
         }
-        const errorMsg = e.target.parentElement.querySelector('.error-msg');
-        if (errorMsg) errorMsg.remove();
-      }
-    });
-  }
-});
 
-// Form submission
-function handleSubmit(e) {
-  e.preventDefault();
-  const form = e.target;
-  let isValid = true;
-  
-  // Clear all previous errors
-  form.querySelectorAll('.error-msg').forEach(el => el.remove());
-  form.querySelectorAll('.invalid').forEach(el => el.classList.remove('invalid'));
+        // Check if we're on a light section
+        let onLightSection = false;
+        sections.forEach((section) => {
+          if (
+            section.id !== "home" &&
+            section.id !== "values" &&
+            section.id !== "cta"
+          ) {
+            const rect = section.getBoundingClientRect();
+            if (rect.top <= 80 && rect.bottom > 80) {
+              onLightSection = true;
+            }
+          }
+        });
 
-  // Validate each required field
-  Array.from(form.elements).forEach(field => {
-    if (field.name && !field.validity.valid) {
-      isValid = false;
-      field.classList.add('invalid');
-      
-      if (field.tagName === 'SELECT' && field.parentElement.classList.contains('custom-select-container')) {
-        field.parentElement.querySelector('.custom-select-trigger').classList.add('invalid');
-      }
-      
-      const error = document.createElement('div');
-      error.className = 'error-msg';
-      // Provide a custom message if it's valueMissing, otherwise use browser's default
-      if (field.validity.valueMissing) {
-        error.textContent = 'This field is required.';
-      } else if (field.validity.typeMismatch && field.type === 'email') {
-        error.textContent = 'Please enter a valid email address.';
-      } else {
-        error.textContent = field.validationMessage || 'Invalid input.';
-      }
-      
-      field.parentElement.appendChild(error);
-    }
-  });
+        if (onLightSection && scrollTop > 50) {
+          navbar.classList.add("light-nav");
+        } else {
+          navbar.classList.remove("light-nav");
+        }
+      });
 
-  if (isValid) {
-    // Show custom toast instead of alert
-    let toast = document.getElementById('successToast');
-    if (!toast) {
-      toast = document.createElement('div');
-      toast.id = 'successToast';
-      toast.className = 'toast-notification';
-      toast.innerHTML = `
+      // Scroll reveal
+      function reveal() {
+        const reveals = document.querySelectorAll(".reveal");
+        reveals.forEach((el) => {
+          const windowHeight = window.innerHeight;
+          const elementTop = el.getBoundingClientRect().top;
+          const elementVisible = 120;
+          if (elementTop < windowHeight - elementVisible) {
+            el.classList.add("visible");
+          }
+        });
+      }
+
+      window.addEventListener("scroll", reveal);
+      window.addEventListener("load", reveal);
+
+      // Form validation and Custom Select setup
+      document.addEventListener("DOMContentLoaded", () => {
+        const form = document.getElementById("contactForm");
+
+        // Custom Select Logic
+        const customSelects = document.querySelectorAll(
+          ".custom-select-container",
+        );
+        customSelects.forEach((container) => {
+          const select = container.querySelector("select");
+          const trigger = container.querySelector(".custom-select-trigger");
+          const triggerText = trigger.querySelector("span");
+          const options = container.querySelectorAll(".custom-option");
+
+          trigger.addEventListener("click", () => {
+            container.classList.toggle("open");
+          });
+
+          options.forEach((option) => {
+            option.addEventListener("click", () => {
+              select.value = option.getAttribute("data-value");
+              select.dispatchEvent(new Event("input", { bubbles: true }));
+
+              triggerText.textContent = option.textContent;
+              options.forEach((opt) => opt.classList.remove("selected"));
+              option.classList.add("selected");
+
+              container.classList.remove("open");
+            });
+          });
+
+          document.addEventListener("click", (e) => {
+            if (!container.contains(e.target)) {
+              container.classList.remove("open");
+            }
+          });
+        });
+
+        if (form) {
+          // Clear error state when the user types or selects
+          form.addEventListener("input", (e) => {
+            if (e.target.classList.contains("invalid")) {
+              e.target.classList.remove("invalid");
+              if (
+                e.target.tagName === "SELECT" &&
+                e.target.parentElement.classList.contains(
+                  "custom-select-container",
+                )
+              ) {
+                e.target.parentElement
+                  .querySelector(".custom-select-trigger")
+                  .classList.remove("invalid");
+              }
+              const errorMsg =
+                e.target.parentElement.querySelector(".error-msg");
+              if (errorMsg) errorMsg.remove();
+            }
+          });
+        }
+      });
+
+      // Form submission
+      function handleSubmit(e) {
+        e.preventDefault();
+        const form = e.target;
+        let isValid = true;
+
+        // Clear all previous errors
+        form.querySelectorAll(".error-msg").forEach((el) => el.remove());
+        form
+          .querySelectorAll(".invalid")
+          .forEach((el) => el.classList.remove("invalid"));
+
+        // Validate each required field
+        Array.from(form.elements).forEach((field) => {
+          if (field.name && !field.validity.valid) {
+            isValid = false;
+            field.classList.add("invalid");
+
+            if (
+              field.tagName === "SELECT" &&
+              field.parentElement.classList.contains("custom-select-container")
+            ) {
+              field.parentElement
+                .querySelector(".custom-select-trigger")
+                .classList.add("invalid");
+            }
+
+            const error = document.createElement("div");
+            error.className = "error-msg";
+            // Provide a custom message if it's valueMissing, otherwise use browser's default
+            if (field.validity.valueMissing) {
+              error.textContent = "This field is required.";
+            } else if (field.validity.typeMismatch && field.type === "email") {
+              error.textContent = "Please enter a valid email address.";
+            } else {
+              error.textContent = field.validationMessage || "Invalid input.";
+            }
+
+            field.parentElement.appendChild(error);
+          }
+        });
+
+        if (isValid) {
+          // Show custom toast instead of alert
+          let toast = document.getElementById("successToast");
+          if (!toast) {
+            toast = document.createElement("div");
+            toast.id = "successToast";
+            toast.className = "toast-notification";
+            toast.innerHTML = `
         <div class="toast-icon">
           <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
         </div>
@@ -325,30 +468,38 @@ function handleSubmit(e) {
           <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
         </button>
       `;
-      document.body.appendChild(toast);
-    }
-    
-    // Force reflow and show
-    void toast.offsetWidth;
-    toast.classList.add('show');
-    
-    // Auto hide
-    setTimeout(() => {
-      toast.classList.remove('show');
-    }, 5000);
+            document.body.appendChild(toast);
+          }
 
-    form.reset();
-    
-    // Reset custom selects visually
-    document.querySelectorAll('.custom-select-container').forEach(container => {
-      const triggerText = container.querySelector('.custom-select-trigger span');
-      const defaultOption = container.querySelector('.custom-option[data-value=""]');
-      triggerText.textContent = defaultOption.textContent;
-      container.querySelectorAll('.custom-option').forEach(opt => opt.classList.remove('selected'));
-      defaultOption.classList.add('selected');
-    });
-  }
-}
-</script>
-</body>
+          // Force reflow and show
+          void toast.offsetWidth;
+          toast.classList.add("show");
+
+          // Auto hide
+          setTimeout(() => {
+            toast.classList.remove("show");
+          }, 5000);
+
+          form.reset();
+
+          // Reset custom selects visually
+          document
+            .querySelectorAll(".custom-select-container")
+            .forEach((container) => {
+              const triggerText = container.querySelector(
+                ".custom-select-trigger span",
+              );
+              const defaultOption = container.querySelector(
+                '.custom-option[data-value=""]',
+              );
+              triggerText.textContent = defaultOption.textContent;
+              container
+                .querySelectorAll(".custom-option")
+                .forEach((opt) => opt.classList.remove("selected"));
+              defaultOption.classList.add("selected");
+            });
+        }
+      }
+    </script>
+  </body>
 </html>
