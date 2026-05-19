@@ -266,3 +266,8 @@
   cursor: pointer; padding: 4px; margin-left: 10px; transition: color var(--transition-fast);
 }
 .toast-close:hover { color: var(--gray-500); }
+
+.required {
+  color: #ef4444;
+  margin-left: 2px;
+}
