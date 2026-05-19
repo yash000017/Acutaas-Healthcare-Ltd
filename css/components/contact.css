@@ -1,10 +1,9 @@
 /* ═══════════ CONTACT ═══════════ */
 #contact { 
   background-color: var(--white);
-  background-image: linear-gradient(rgba(var(--white-rgb), 0.92), rgba(var(--white-rgb), 0.92)), url('../../assets/images/contact_hero_bg.png');
+  background-image: linear-gradient(rgba(var(--white-rgb), 0.92), rgba(var(--white-rgb), 0.92)), url('../../assets/images/contact_hero_bg.webp');
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
 }
 
 .contact-grid {

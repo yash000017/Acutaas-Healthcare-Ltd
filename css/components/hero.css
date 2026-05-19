@@ -2,11 +2,10 @@
 #home {
   min-height: 100vh;
   background-color: var(--navy);
-  background-image: linear-gradient(rgba(var(--navy-rgb), 0.95), rgba(var(--navy-rgb), 0.95)), url('../../assets/images/hero_main_bg.png');
+  background-image: linear-gradient(rgba(var(--navy-rgb), 0.95), rgba(var(--navy-rgb), 0.95)), url('../../assets/images/hero_main_bg.webp');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-attachment: fixed;
   position: relative;
   display: flex;
   align-items: center;

@@ -1,10 +1,9 @@
 /* ═══════════ CTA ═══════════ */
 #cta {
   background-color: var(--blue-primary);
-  background-image: linear-gradient(135deg, rgba(var(--blue-primary-rgb), 0.9) 0%, rgba(var(--navy-rgb), 0.9) 100%), url('../../assets/images/cta_bg.png');
+  background-image: linear-gradient(135deg, rgba(var(--blue-primary-rgb), 0.9) 0%, rgba(var(--navy-rgb), 0.9) 100%), url('../../assets/images/cta_bg.webp');
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
   padding: 70px 5%;
   text-align: center;
 }

@@ -1,10 +1,9 @@
 /* ═══════════ VALUES ═══════════ */
 #values { 
   background-color: var(--navy); 
-  background-image: linear-gradient(rgba(var(--navy-rgb), 0.9), rgba(var(--navy-rgb), 0.9)), url('../../assets/images/pharma_values_bg.png');
+  background-image: linear-gradient(rgba(var(--navy-rgb), 0.9), rgba(var(--navy-rgb), 0.9)), url('../../assets/images/pharma_values_bg.webp');
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
   padding: 90px 5%; 
 }
 

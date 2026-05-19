@@ -1,4 +1,17 @@
 /* ═══════════ RESPONSIVE ═══════════ */
+section:not(#home):not(.page-hero) {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 600px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
 @media (max-width: 1024px) {
   nav { padding: 0 5%; }
   .nav-links { display: none; }

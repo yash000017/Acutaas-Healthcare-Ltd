@@ -4,7 +4,6 @@
   background-image: linear-gradient(rgba(var(--off-white-rgb), 0.95), rgba(var(--off-white-rgb), 0.95)), url('');
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
 }
 
 .about-grid {

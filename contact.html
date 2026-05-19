@@ -5,32 +5,18 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Contact Us | Acutaas Healthcare Ltd</title>
 <meta name="description" content="Contact Acutaas Healthcare Ltd for enquiries, partnerships, and product information. We are committed to patient-centric healthcare solutions.">
-<link rel="icon" type="image/png" href="./assets/images/logo-capsule.png">
+<link rel="icon" type="image/webp" href="./assets/images/logo-capsule-nav.webp">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preload" as="image" href="./assets/images/contact_us_bg.png">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="./css/base/variables.css">
-<link rel="stylesheet" href="./css/base/global.css">
-<link rel="stylesheet" href="./css/base/animations.css">
-<link rel="stylesheet" href="./css/base/common.css">
-<link rel="stylesheet" href="./css/components/navbar.css">
-<link rel="stylesheet" href="./css/components/hero.css">
-<link rel="stylesheet" href="./css/components/about.css">
-<link rel="stylesheet" href="./css/components/mission.css">
-<link rel="stylesheet" href="./css/components/values.css">
-<link rel="stylesheet" href="./css/components/partner.css">
-<link rel="stylesheet" href="./css/components/cta.css">
-<link rel="stylesheet" href="./css/components/contact.css">
-<link rel="stylesheet" href="./css/components/footer.css">
-<link rel="stylesheet" href="./css/base/responsive.css">
-<link rel="stylesheet" href="./css/components/page-layout.css">
-<!-- EmailJS SDK -->
+<link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+<link rel="preload" as="image" href="./assets/images/contact_us_bg.webp" fetchpriority="high" type="image/webp">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@400;500;600&display=swap" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@400;500;600&display=swap"></noscript>
+<link rel="stylesheet" href="./css/site.bundle.css">
 <script defer src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-<script>
-  // ✅ Replace with your EmailJS Public Key
-  emailjs.init('ziCqBvPC-MPUfeoyY');
-</script>
+<script src="./js/site.js" defer></script>
+<script src="./js/contact.js" defer></script>
+
 </head>
 <body>
 
@@ -38,7 +24,7 @@
 <nav id="navbar">
   <a href="index.html#home" class="nav-logo">
     <div class="nav-logo-icon">
-      <img src="./assets/images/logo-capsule.png" alt="Acutaas Logo" class="logo-img" width="624" height="609" />
+      <img src="./assets/images/logo-capsule-nav.webp" alt="Acutaas Logo" class="logo-img" width="48" height="48" />
     </div>
     <div>
       <span class="nav-logo-text">Acutaas</span>
@@ -74,7 +60,7 @@
 </div>
 
 <!-- MARKETING HERO -->
-<section id="home" style="background-image: linear-gradient(rgba(var(--navy-rgb), 0.95), rgba(var(--navy-rgb), 0.95)), url('./assets/images/contact_us_bg.png');">
+<section id="home" style="background-image: linear-gradient(rgba(var(--navy-rgb), 0.95), rgba(var(--navy-rgb), 0.95)), url('./assets/images/contact_us_bg.webp');">
   <div class="hero-bg-grid"></div>
   <div class="hero-orb hero-orb-1"></div>
   <div class="hero-orb hero-orb-2"></div>
@@ -238,7 +224,7 @@
   <div class="footer-top">
     <div>
       <a href="index.html#home" class="nav-logo" style="margin-bottom: 10px;">
-        <div class="nav-logo-icon"><img src="./assets/images/logo-capsule.png" alt="Acutaas Logo" class="logo-img" width="624" height="609" loading="lazy" /></div>
+        <div class="nav-logo-icon"><img src="./assets/images/logo-capsule-nav.webp" alt="Acutaas Logo" class="logo-img" width="48" height="48" loading="lazy" /></div>
         <div>
           <span class="nav-logo-text">Acutaas</span>
           <span class="nav-logo-sub">Healthcare Ltd.</span>
@@ -286,205 +272,5 @@
   </div>
 </footer>
 
-<script>
-// ─── Mobile menu ────────────────────────────────────────────────
-function toggleMenu() {
-  document.getElementById('mobileMenu').classList.toggle('open');
-}
-
-// ─── Navbar scroll effect ────────────────────────────────────────
-window.addEventListener('scroll', function () {
-  const navbar = document.getElementById('navbar');
-  const sections = document.querySelectorAll('section');
-  const scrollTop = window.scrollY;
-
-  navbar.classList.toggle('scrolled', scrollTop > 50);
-
-  let onLightSection = false;
-  sections.forEach(section => {
-    if (section.id !== 'home' && section.id !== 'values' && section.id !== 'cta') {
-      const rect = section.getBoundingClientRect();
-      if (rect.top <= 80 && rect.bottom > 80) onLightSection = true;
-    }
-  });
-
-  navbar.classList.toggle('light-nav', onLightSection && scrollTop > 50);
-});
-
-// ─── Scroll reveal ───────────────────────────────────────────────
-function reveal() {
-  document.querySelectorAll('.reveal').forEach(el => {
-    if (el.getBoundingClientRect().top < window.innerHeight - 120) {
-      el.classList.add('visible');
-    }
-  });
-}
-window.addEventListener('scroll', reveal);
-window.addEventListener('load', reveal);
-
-// ─── Custom select + form validation setup ───────────────────────
-document.addEventListener('DOMContentLoaded', () => {
-  // Custom Select Logic
-  document.querySelectorAll('.custom-select-container').forEach(container => {
-    const select = container.querySelector('select');
-    const trigger = container.querySelector('.custom-select-trigger');
-    const triggerText = trigger.querySelector('span');
-    const options = container.querySelectorAll('.custom-option');
-
-    trigger.addEventListener('click', () => container.classList.toggle('open'));
-
-    options.forEach(option => {
-      option.addEventListener('click', () => {
-        select.value = option.getAttribute('data-value');
-        select.dispatchEvent(new Event('input', { bubbles: true }));
-        triggerText.textContent = option.textContent;
-        options.forEach(opt => opt.classList.remove('selected'));
-        option.classList.add('selected');
-        container.classList.remove('open');
-      });
-    });
-
-    document.addEventListener('click', (e) => {
-      if (!container.contains(e.target)) container.classList.remove('open');
-    });
-  });
-
-  // Clear error on input
-  const form = document.getElementById('contactForm');
-  if (form) {
-    form.addEventListener('input', (e) => {
-      if (e.target.classList.contains('invalid')) {
-        e.target.classList.remove('invalid');
-        if (e.target.tagName === 'SELECT' && e.target.closest('.custom-select-container')) {
-          e.target.closest('.custom-select-container').querySelector('.custom-select-trigger').classList.remove('invalid');
-        }
-        const errorMsg = e.target.parentElement.querySelector('.error-msg');
-        if (errorMsg) errorMsg.remove();
-      }
-    });
-
-    // ─── EmailJS submission ────────────────────────────────────
-    form.addEventListener('submit', async (e) => {
-      e.preventDefault();
-
-      // 1. Client-side validation
-      let isValid = true;
-      form.querySelectorAll('.error-msg').forEach(el => el.remove());
-      form.querySelectorAll('.invalid').forEach(el => el.classList.remove('invalid'));
-
-      Array.from(form.elements).forEach(field => {
-        if (field.name && !field.validity.valid) {
-          isValid = false;
-          field.classList.add('invalid');
-
-          if (field.tagName === 'SELECT' && field.closest('.custom-select-container')) {
-            field.closest('.custom-select-container').querySelector('.custom-select-trigger').classList.add('invalid');
-          }
-
-          const error = document.createElement('div');
-          error.className = 'error-msg';
-          if (field.validity.valueMissing) {
-            error.textContent = 'This field is required.';
-          } else if (field.validity.typeMismatch && field.type === 'email') {
-            error.textContent = 'Please enter a valid email address.';
-          } else {
-            error.textContent = field.validationMessage || 'Invalid input.';
-          }
-          field.parentElement.appendChild(error);
-        }
-      });
-
-      if (!isValid) return;
-
-      // 2. Send via EmailJS
-      const btn = document.getElementById('submitBtn');
-      btn.textContent = 'Sending…';
-      btn.disabled = true;
-
-      // Build template params — these must match your EmailJS template variables
-      const templateParams = {
-        from_first_name : document.getElementById('firstName').value.trim(),
-        from_last_name  : document.getElementById('lastName').value.trim(),
-        from_name       : `${document.getElementById('firstName').value.trim()} ${document.getElementById('lastName').value.trim()}`,
-        from_email      : document.getElementById('email').value.trim(),
-        from_company    : document.getElementById('company').value.trim() || 'N/A',
-        enquiry_type    : document.getElementById('enquiryType').value || 'Not specified',
-        message         : document.getElementById('message').value.trim(),
-        to_name         : 'Acutaas Healthcare',
-      };
-
-      try {
-        // ✅ Replace with your EmailJS Service ID and Template ID
-        await emailjs.send('service_6a6sni2', 'template_iytk4bb', templateParams);
-        showToast(true);
-        form.reset();
-        resetCustomSelects();
-      } catch (err) {
-        console.error('EmailJS error:', err);
-        showToast(false, 'Failed to send. Please email us directly at bd@acutaashealthcare.com');
-      } finally {
-        btn.textContent = 'Send Message';
-        btn.disabled = false;
-      }
-    });
-  }
-});
-
-// ─── Toast notification ──────────────────────────────────────────
-function showToast(success, errorMsg = '') {
-  // Remove existing toast if any
-  const existing = document.getElementById('successToast');
-  if (existing) existing.remove();
-
-  const toast = document.createElement('div');
-  toast.id = 'successToast';
-  toast.className = 'toast-notification';
-
-  if (success) {
-    toast.innerHTML = `
-      <div class="toast-icon">
-        <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-      </div>
-      <div class="toast-content">
-        <span class="toast-title">Message Sent!</span>
-        <span class="toast-message">Thank you. We will get back to you soon.</span>
-      </div>
-      <button class="toast-close" onclick="this.parentElement.classList.remove('show')">
-        <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
-      </button>`;
-  } else {
-    toast.style.borderLeft = '4px solid #e53935';
-    toast.innerHTML = `
-      <div class="toast-icon" style="background: #fdecea; color: #e53935;">
-        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg>
-      </div>
-      <div class="toast-content">
-        <span class="toast-title">Failed to Send</span>
-        <span class="toast-message">${errorMsg}</span>
-      </div>
-      <button class="toast-close" onclick="this.parentElement.classList.remove('show')">
-        <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
-      </button>`;
-  }
-
-  document.body.appendChild(toast);
-  void toast.offsetWidth; // force reflow
-  toast.classList.add('show');
-  setTimeout(() => toast.classList.remove('show'), 5000);
-}
-
-// ─── Reset custom selects after form.reset() ─────────────────────
-function resetCustomSelects() {
-  document.querySelectorAll('.custom-select-container').forEach(container => {
-    const triggerText = container.querySelector('.custom-select-trigger span');
-    const defaultOption = container.querySelector('.custom-option[data-value=""]');
-    if (defaultOption && triggerText) {
-      triggerText.textContent = defaultOption.textContent;
-      container.querySelectorAll('.custom-option').forEach(opt => opt.classList.remove('selected'));
-      defaultOption.classList.add('selected');
-    }
-  });
-}
-</script>
 </body>
 </html>
