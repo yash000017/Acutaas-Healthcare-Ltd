@@ -22,6 +22,12 @@
 <link rel="stylesheet" href="./css/components/footer.css">
 <link rel="stylesheet" href="./css/base/responsive.css">
 <link rel="stylesheet" href="./css/components/page-layout.css">
+<!-- EmailJS SDK -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>
+  // ✅ Replace with your EmailJS Public Key
+  emailjs.init('ziCqBvPC-MPUfeoyY');
+</script>
 </head>
 <body>
 
@@ -150,14 +156,6 @@
 
         <div class="contact-form reveal reveal-delay-1">
           <form id="contactForm" novalidate>
-            <!-- ✅ Web3Forms Access Key — replace with your own from web3forms.com -->
-            <input type="hidden" name="access_key" value="e52ccc98-1004-45db-ba60-9ac510885498">
-            <!-- Optional: Customise the subject line of the email you receive -->
-            <input type="hidden" name="subject" value="New Contact Enquiry — Acutaas Healthcare">
-            <!-- Optional: Redirect after submission (remove if you want JS-only handling) -->
-            <!-- <input type="hidden" name="redirect" value="https://yoursite.com/thank-you.html"> -->
-            <!-- Honeypot spam protection -->
-            <input type="checkbox" name="botcheck" style="display:none;">
 
             <div class="form-row">
               <div class="form-group">
@@ -348,7 +346,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
 
-    // ─── Web3Forms submission ──────────────────────────────────
+    // ─── EmailJS submission ────────────────────────────────────
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
 
@@ -358,7 +356,7 @@ document.addEventListener('DOMContentLoaded', () => {
       form.querySelectorAll('.invalid').forEach(el => el.classList.remove('invalid'));
 
       Array.from(form.elements).forEach(field => {
-        if (field.name && field.name !== 'access_key' && field.name !== 'subject' && field.name !== 'botcheck' && !field.validity.valid) {
+        if (field.name && !field.validity.valid) {
           isValid = false;
           field.classList.add('invalid');
 
@@ -381,30 +379,32 @@ document.addEventListener('DOMContentLoaded', () => {
 
       if (!isValid) return;
 
-      // 2. Send via Web3Forms
+      // 2. Send via EmailJS
       const btn = document.getElementById('submitBtn');
       btn.textContent = 'Sending…';
       btn.disabled = true;
 
+      // Build template params — these must match your EmailJS template variables
+      const templateParams = {
+        from_first_name : document.getElementById('firstName').value.trim(),
+        from_last_name  : document.getElementById('lastName').value.trim(),
+        from_name       : `${document.getElementById('firstName').value.trim()} ${document.getElementById('lastName').value.trim()}`,
+        from_email      : document.getElementById('email').value.trim(),
+        from_company    : document.getElementById('company').value.trim() || 'N/A',
+        enquiry_type    : document.getElementById('enquiryType').value || 'Not specified',
+        message         : document.getElementById('message').value.trim(),
+        to_name         : 'Acutaas Healthcare',
+      };
+
       try {
-        const formData = new FormData(form);
-        const response = await fetch('https://api.web3forms.com/submit', {
-          method: 'POST',
-          body: formData
-        });
-
-        const data = await response.json();
-
-        if (data.success) {
-          showToast(true);
-          form.reset();
-          resetCustomSelects();
-        } else {
-          showToast(false, data.message || 'Something went wrong. Please try again.');
-        }
+        // ✅ Replace with your EmailJS Service ID and Template ID
+        await emailjs.send('service_6a6sni2', 'template_iytk4bb', templateParams);
+        showToast(true);
+        form.reset();
+        resetCustomSelects();
       } catch (err) {
-        console.error('Submission error:', err);
-        showToast(false, 'Network error. Please check your connection and try again.');
+        console.error('EmailJS error:', err);
+        showToast(false, 'Failed to send. Please email us directly at yashmodiofficial@gmail.com');
       } finally {
         btn.textContent = 'Send Message';
         btn.disabled = false;
