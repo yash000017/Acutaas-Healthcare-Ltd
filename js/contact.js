@@ -1,6 +1,25 @@
+const EMAILJS_PUBLIC_KEY = 'ziCqBvPC-MPUfeoyY';
+
+function getEmailJs() {
+  return window.emailjs;
+}
+
+function initEmailJs() {
+  const emailjs = getEmailJs();
+  if (!emailjs) {
+    throw new Error('EmailJS SDK failed to load. Check your network connection or ad blocker.');
+  }
+  emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
+  return emailjs;
+}
+
 document.addEventListener('DOMContentLoaded', () => {
-  if (typeof emailjs !== 'undefined') {
-    emailjs.init('ziCqBvPC-MPUfeoyY');
+  let emailjs;
+  try {
+    emailjs = initEmailJs();
+  } catch (err) {
+    console.error(err);
+    return;
   }
 
   const form = document.getElementById('contactForm');
@@ -53,7 +72,9 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     try {
-      await emailjs.send('service_6a6sni2', 'template_iytk4bb', templateParams);
+      await emailjs.send('service_6a6sni2', 'template_iytk4bb', templateParams, {
+        publicKey: EMAILJS_PUBLIC_KEY,
+      });
       showToast(true);
       form.reset();
       resetCustomSelects();

@@ -31,7 +31,7 @@ PAGE_CONFIG = {
 }
 
 
-def replace_head(content: str, bundle: str, preload: str, extra_head: str = "", contact_script: str = "") -> str:
+def replace_head(content: str, bundle: str, preload: str, extra_head: str = "") -> str:
     start = content.index("<head>")
     end = content.index("</head>") + len("</head>")
     new_head = f"""<head>
@@ -45,24 +45,31 @@ def replace_head(content: str, bundle: str, preload: str, extra_head: str = "", 
 <link rel="preload" as="image" href="./assets/images/{preload}" fetchpriority="high" type="image/webp">
 {FONT_LINK}
 <link rel="stylesheet" href="./css/{bundle}">
-{extra_head}<script src="./js/site.js" defer></script>
-{contact_script}
-</head>"""
+{extra_head}</head>"""
     return content[:start] + new_head + content[end:]
 
 
-EMAILJS_HEAD = """<script defer src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-<script>
-  emailjs.init('ziCqBvPC-MPUfeoyY');
-</script>
+SITE_JS_FOOTER = '<script src="./js/site.js" defer></script>\n'
+
+
+EMAILJS_FOOTER = """<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script src="./js/site.js" defer></script>
+<script src="./js/contact.js" defer></script>
 """
+
+
+def inject_footer_scripts(text: str, is_contact: bool) -> str:
+    footer_scripts = EMAILJS_FOOTER if is_contact else SITE_JS_FOOTER
+    if footer_scripts.strip() in text:
+        return text
+    return text.replace("</body>", f"\n{footer_scripts}</body>")
 
 
 def patch_file(path: Path, cfg: dict) -> None:
     text = path.read_text(encoding="utf-8")
-    extra = EMAILJS_HEAD if path.name == "contact.html" else ""
-    contact_script = '<script src="./js/contact.js" defer></script>\n' if path.name == "contact.html" else ""
-    text = replace_head(text, cfg["bundle"], cfg["preload"], extra, contact_script)
+    is_contact = path.name == "contact.html"
+    extra = '<link rel="dns-prefetch" href="https://cdn.jsdelivr.net">\n' if is_contact else ""
+    text = replace_head(text, cfg["bundle"], cfg["preload"], extra)
 
     text = text.replace(
         'src="./assets/images/logo-capsule.png" alt="Acutaas Logo" class="logo-img" width="624" height="609" loading="lazy"',
@@ -99,6 +106,7 @@ def patch_file(path: Path, cfg: dict) -> None:
             end = text.index("</script>", start) + len("</script>")
             text = text[:start].rstrip() + "\n" + text[end:]
 
+    text = inject_footer_scripts(text, is_contact)
     path.write_text(text, encoding="utf-8")
     print(f"Patched {path.name}")
 
