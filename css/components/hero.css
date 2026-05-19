@@ -173,7 +173,8 @@
   width: 100%;
   height: 100%;
   object-fit: contain;
-  animation: float 5s ease-in-out infinite;
+  transform-origin: top center;
+  animation: pendulum 20s ease-in-out infinite;
   filter: drop-shadow(0 15px 35px rgba(var(--black-rgb), 0.25));
 }
 

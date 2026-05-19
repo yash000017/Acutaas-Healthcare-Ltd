@@ -84,6 +84,11 @@
   100% { transform: translate(60px, 60px); }
 }
 
+@keyframes pendulum {
+  0%, 100% { transform: rotate(15deg); }
+  50% { transform: rotate(-15deg); }
+}
+
 /* ═══════════ SECTION ANIMATIONS ═══════════ */
 .section-anim-container {
   position: absolute;
