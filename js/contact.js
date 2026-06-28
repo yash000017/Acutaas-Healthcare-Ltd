@@ -1,4 +1,5 @@
 const EMAILJS_PUBLIC_KEY = 'ziCqBvPC-MPUfeoyY';
+// const EMAILJS_PUBLIC_KEY = 'dkv0Fx5nJsN-dAsvF';
 
 function getEmailJs() {
   return window.emailjs;
@@ -75,6 +76,9 @@ document.addEventListener('DOMContentLoaded', () => {
       await emailjs.send('service_6a6sni2', 'template_iytk4bb', templateParams, {
         publicKey: EMAILJS_PUBLIC_KEY,
       });
+      // await emailjs.send('service_4c3f78b', 'template_t0ytgum', templateParams, {
+      //   publicKey: EMAILJS_PUBLIC_KEY,
+      // });
       showToast(true);
       form.reset();
       resetCustomSelects();
